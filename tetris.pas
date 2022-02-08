@@ -87,7 +87,7 @@ begin
 end;
 
 { Обработчик событий }
-procedure Update(k: TKey; s: TState);
+procedure Update(s: TState; k: TKey);
 begin
   case k of
     Left: begin
@@ -123,7 +123,7 @@ begin
   while true do begin
     if KeyPressed then
       k := HandleInput();
-    Update(k, s);
+    Update(s, k);
     Print(s); 
   end
 end.
