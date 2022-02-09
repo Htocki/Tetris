@@ -1,7 +1,7 @@
 program Tetris;
 uses crt;
 type
-  TKey = (Up, Down, Left, Right, Escape, Space);
+  TKey = (Up, Down, Left, Right, Escape, Space, NonPressed);
   TMatrix = array of array of integer;
 
 procedure Clear(state: TMatrix);
@@ -147,8 +147,8 @@ begin
   end
 end;
 
-{ Копирует в матрицу отображения, ту часть матрицы состояния, которая не
-  строки используемые для генерации номой фигуры. }
+{ Копирует в матрицу отображения ту часть матрицы состояния, которая не
+  строки используемые для генерации новой фигуры. }
 procedure FillDisplayMatrix(var state: TMatrix; var display: TMatrix);
 begin
 end;
@@ -169,15 +169,11 @@ begin
     for j := 0 to h - 1 do begin
       GotoXY(i + indent_x, j + indent_y);
       if display[i, j] = 1 then begin
-        TextColor(Red);
+        TextColor(Green);
         Write('H');
       end
       else if display[i, j] = 2 then begin
         TextColor(White);
-        Write('H');
-      end
-      else if display[i, j] = 0 then begin
-        TextColor(Yellow);
         Write('H');
       end;
     end;
@@ -209,7 +205,6 @@ end;
 { Обработчик событий }
 procedure Update(state: TMatrix; k: TKey);
 begin
-  delay(500);
   case k of
     Left: ;
     Right: ;
@@ -229,9 +224,11 @@ var
 begin
   InitializeField(s, width, height);
   while true do begin
-    if KeyPressed then
+    if KeyPressed then begin
       k := HandleInput();
-    Update(s, k);
-    Print(s); 
+      Update(s, k);
+    end;
+    Print(s);
+    delay(16); { Чуть больше 60 кадров в секунду. }
   end
 end.
