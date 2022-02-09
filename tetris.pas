@@ -127,11 +127,11 @@ end;
   момент фигура. }
 procedure InitializeField(var state: TMatrix; width, height: integer);
 const
-  figure_generate_area_height = 4;
+  figure_generation_area_height = 4;
 var
   i, j, all_height: integer;
 begin
-  all_height := height + figure_generate_area_height;
+  all_height := height + figure_generation_area_height;
   SetLength(state, width, all_height);
   { Заполнение всей матрицы состояния нулями. }
   for i := 0 to width - 1 do
@@ -141,7 +141,7 @@ begin
   for i := 0 to width - 1 do
     state[i, all_height - 1] := 1;
   { Добавление боковых границ карты. }
-  for j := figure_generate_area_height to all_height - 2 do begin
+  for j := figure_generation_area_height to all_height - 2 do begin
     state[0, j] := 1;
     state[width - 1, j] := 1;
   end
@@ -150,7 +150,17 @@ end;
 { Копирует в матрицу отображения ту часть матрицы состояния, которая не
   строки используемые для генерации новой фигуры. }
 procedure FillDisplayMatrix(var state: TMatrix; var display: TMatrix);
+const
+  figure_generation_area_height = 4;
+var
+  i, j, w, h: integer;
 begin
+  w := Length(state);
+  h := Length(state[0]) - figure_generation_area_height;
+  SetLength(display, w, h);
+  for i := 0 to w - 1 do
+    for j := 0 to h - 1 do
+      display[i, j] := state[i, j + figure_generation_area_height];
 end;
 
 { Ковертирует матрицу состояния в графическое представление и отображает его
@@ -220,7 +230,7 @@ const
   height = 40;
 var
   k: TKey;
-  s: TMatrix;
+  s, d: TMatrix;
 begin
   InitializeField(s, width, height);
   while true do begin
@@ -228,7 +238,8 @@ begin
       k := HandleInput();
       Update(s, k);
     end;
-    Print(s);
+    FillDisplayMatrix(s, d);
+    Print(d);
     delay(16); { Чуть больше 60 кадров в секунду. }
   end
 end.
