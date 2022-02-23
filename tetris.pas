@@ -4,6 +4,7 @@ type
   TKey = (Up, Down, Left, Right, Escape, Space, NonPressed);
   TMatrix = array of array of integer;
 
+{$I utility/copy_matrix.pas}
 {$I model/add_figure.pas}
 {$I model/initialize_field.pas}
 {$I model/get_display_matrix.pas}
