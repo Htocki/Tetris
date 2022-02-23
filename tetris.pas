@@ -7,6 +7,7 @@ type
 {$I model/add_figure.pas}
 {$I model/initialize_field.pas}
 {$I model/get_display_matrix.pas}
+{$I model/move_figure_down.pas}
 {$I view/print.pas}
 {$I controller/handle_input.pas}
 {$I model/update.pas}
@@ -25,7 +26,7 @@ begin
       Update(s, k);
     end;
     GetDisplayMatrix(s, d);
-    Print(d);
+    Print(s);
     delay(16); { Чуть больше 60 кадров в секунду. }
   end
 end.
