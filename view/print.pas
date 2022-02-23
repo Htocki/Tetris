@@ -20,6 +20,10 @@ begin
       else if display[i, j] = 2 then begin
         TextColor(White);
         Write('H');
+      end
+      else if display[i, j] = 3 then begin
+        TextColor(Yellow);
+        Write('H');
       end;
     end;
   GotoXY(1, 1);

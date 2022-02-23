@@ -5,8 +5,11 @@ begin
     Left: ;
     Right: ;
     Up: ;
-    Down: MoveFigureDown(state);
+    Down: begin
+      if not MoveFigureDown(state) then
+        DeactivateFigure(state);
+    end;
     Space: AddFigure(state);
     Escape: halt;
-  end
+  end;
 end;
