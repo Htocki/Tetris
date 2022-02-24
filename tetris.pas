@@ -17,8 +17,8 @@ type
 {$I model/update.pas}
 
 const
-  width = 50;
-  height = 40;
+  width = 30;
+  height = 30;
 var
   k: TKey;
   s, d: TMatrix;
@@ -27,10 +27,11 @@ begin
   while true do begin
     if KeyPressed then begin
       k := HandleInput();
-      Update(s, k);
+      UpdateInput(s, k);
     end;
+    Update(s);
     GetDisplayMatrix(s, d);
     Print(s);
-    delay(16); { Чуть больше 60 кадров в секунду. }
+    Delay(116); { Чуть больше 60 кадров в секунду. }
   end
 end.
