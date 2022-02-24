@@ -10,7 +10,9 @@ begin
           exit;
         end;
         tmp[i - 1, j] := tmp[i, j];
-        if tmp[i + 1, j] = 0 then
+        if (tmp[i + 1, j] = 0) or
+           (tmp[i + 1, j] = 1) or
+           (tmp[i + 1, j] = 3) then
           tmp[i, j] := 0;
       end;
   MoveLeft := True;
