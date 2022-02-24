@@ -20,5 +20,7 @@ begin
   for j := figure_generation_area_height to all_height - 2 do begin
     state[0, j] := 1;
     state[width - 1, j] := 1;
-  end
+  end;
+  { Добавление фигуры. }
+  AddFigure(state);
 end;

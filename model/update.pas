@@ -6,10 +6,12 @@ begin
     Right: MoveFigureRight(state);
     Up: ;
     Down: begin
-      if not MoveFigureDown(state) then
+      if not MoveFigureDown(state) then begin
         DeactivateFigure(state);
+        AddFigure(state);
+      end;
     end;
-    Space: AddFigure(state);
+    Space: ;
     Escape: halt;
   end;
 end;
