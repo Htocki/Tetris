@@ -2,7 +2,7 @@
 procedure Update(var state: TMatrix; k: TKey);
 begin
   case k of
-    Left: ;
+    Left: MoveFigureLeft(state);
     Right: ;
     Up: ;
     Down: begin

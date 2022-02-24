@@ -9,6 +9,7 @@ type
 {$I model/initialize_field.pas}
 {$I model/get_display_matrix.pas}
 {$I model/move_figure_down.pas}
+{$I model/move_figure_left.pas}
 {$I model/deactivate_figure.pas}
 {$I view/print.pas}
 {$I controller/handle_input.pas}
