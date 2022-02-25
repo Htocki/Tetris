@@ -12,6 +12,7 @@ type
 {$I model/move_figure_left.pas}
 {$I model/move_figure_right.pas}
 {$I model/deactivate_figure.pas}
+{$I model/delete_filled_line.pas}
 {$I view/print.pas}
 {$I controller/handle_input.pas}
 {$I model/update.pas}
@@ -31,7 +32,7 @@ begin
     end;
     Update(s);
     GetDisplayMatrix(s, d);
-    Print(s);
+    Print(d);
     Delay(116); { Чуть больше 60 кадров в секунду. }
   end
 end.

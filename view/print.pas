@@ -16,12 +16,10 @@ begin
       if display[i, j] = 1 then begin
         TextColor(Green);
         Write('H');
-      end
-      else if display[i, j] = 2 then begin
+      end else if display[i, j] = 2 then begin
         TextColor(White);
         Write('H');
-      end
-      else if display[i, j] = 3 then begin
+      end else if display[i, j] = 3 then begin
         TextColor(Yellow);
         Write('H');
       end;

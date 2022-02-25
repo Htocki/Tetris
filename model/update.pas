@@ -16,7 +16,7 @@ begin
   { Автоматическое движение фигуры вниз. }
   if not MoveFigureDown(state) then begin
     DeactivateFigure(state);
+    DeleteFilledLine(state);
     AddFigure(state);
   end;
-  { Задержка.}
 end;
