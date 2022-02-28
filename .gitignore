@@ -1,5 +1,6 @@
-**/**/*.o
-**/**/*.ppu
-*.o
-*.ppu
+model/field/field.o
+model/field/field.ppu
+model/figure/figure.o
+model/figure/figure.ppu
+tetris.o
 tetris
