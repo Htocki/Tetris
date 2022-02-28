@@ -1,5 +1,6 @@
+{ add.pas }
 { Добавляет на матрицу состояния фигуру J. }
-procedure AddFigureJ(state: TMatrix);
+procedure AddJ(var state: TMatrix);
 var
   origin: integer;
 begin
@@ -11,7 +12,7 @@ begin
 end;
 
 { Добавляет на матрицу состояния фигуру I. }
-procedure AddFigureI(state: TMatrix);
+procedure AddI(var state: TMatrix);
 var
   origin: integer;
 begin
@@ -23,7 +24,7 @@ begin
 end;
 
 { Добавляет на матрицу состояния фигуру O. }
-procedure AddFigureO(state: TMatrix);
+procedure AddO(var state: TMatrix);
 var
   origin: integer;
 begin
@@ -35,7 +36,7 @@ begin
 end;
 
 { Добавляет на матрицу состояния фигуру L. }
-procedure AddFigureL(state: TMatrix);
+procedure AddL(var state: TMatrix);
 var
   origin: integer;
 begin
@@ -47,7 +48,7 @@ begin
 end;
 
 { Добавляет на матрицу состояния фигуру Z. }
-procedure AddFigureZ(state: TMatrix);
+procedure AddZ(var state: TMatrix);
 var
   origin: integer;
 begin
@@ -59,7 +60,7 @@ begin
 end;
 
 { Добавляет на матрицу состояния фигуру T. }
-procedure AddFigureT(state: TMatrix);
+procedure AddT(var state: TMatrix);
 var
   origin: integer;
 begin
@@ -71,7 +72,7 @@ begin
 end;
 
 { Добавляет на матрицу состояния фигуру S. }
-procedure AddFigureS(state: TMatrix);
+procedure AddS(var state: TMatrix);
 var
   origin: integer;
 begin
@@ -91,18 +92,18 @@ end;
    4 - фигура Z
    5 - фигура T
    6 - фигура S }
-procedure AddFigure(state: TMatrix);
+procedure figAdd(var state: TMatrix);
 var
   n: integer;
 begin
   n := random(7);
   case n of
-    0: AddFigureJ(state);
-    1: AddFigureI(state);
-    2: AddFigureO(state);
-    3: AddFigureL(state);
-    4: AddFigureZ(state);
-    5: AddFigureT(state);
-    6: AddFigureS(state);
+    0: AddJ(state);
+    1: AddI(state);
+    2: AddO(state);
+    3: AddL(state);
+    4: AddZ(state);
+    5: AddT(state);
+    6: AddS(state);
   end;
 end;

@@ -1,5 +1,4 @@
-{ Считывает символьный код нажатой клавиши, преобразует его в соответстующее
-  значение перечисления TKey. }
+{ handle_input.pas }
 function HandleInput(): TKey;
 var
   ch: char;

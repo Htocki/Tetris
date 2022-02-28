@@ -1,2 +1,5 @@
-tetris.o
+**/**/*.o
+**/**/*.ppu
+*.o
+*.ppu
 tetris

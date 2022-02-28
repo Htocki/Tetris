@@ -1,13 +1,14 @@
+{ initialize.pas }
 { Заполняет матрицу состояния:
   0 (нули) - пустая область;
   1 (единицы) - граница игровой области. }
-procedure InitializeField(var state: TMatrix; width, height: integer);
+procedure fieAdd(var state: TMatrix; width, height: integer);
 const
-  figure_generation_area_height = 4;
+  generation_area_height = 4;
 var
   i, j, all_height: integer;
 begin
-  all_height := height + figure_generation_area_height;
+  all_height := height + generation_area_height;
   SetLength(state, width, all_height);
   { Заполнение всей матрицы состояния нулями. }
   for i := 0 to width - 1 do
@@ -17,10 +18,10 @@ begin
   for i := 0 to width - 1 do
     state[i, all_height - 1] := 1;
   { Добавление боковых границ карты. }
-  for j := figure_generation_area_height to all_height - 2 do begin
+  for j := generation_area_height to all_height - 2 do begin
     state[0, j] := 1;
     state[width - 1, j] := 1;
   end;
   { Добавление фигуры. }
-  AddFigure(state);
+  figAdd(state);
 end;

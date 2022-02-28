@@ -1,3 +1,4 @@
+{ delete_line.pas }
 function IsLineFilled(var state: TMatrix; j: integer): boolean;
 var
   i: integer;
@@ -10,7 +11,7 @@ begin
   IsLineFilled := True;
 end;
 
-procedure CutLine(var state: TMatrix; n: integer);
+procedure Delete(var state: TMatrix; n: integer);
 var
   i, j: integer;
 begin
@@ -19,11 +20,11 @@ begin
       state[i, j] := state[i, j - 1];
 end;
 
-procedure DeleteFilledLine(var state: TMatrix);
+procedure fieDeleteFilledLine(var state: TMatrix);
 var
   j: integer;
 begin
   for j := 4 to Length(state[0]) - 2 do
     if IsLineFilled(state, j) then
-      CutLine(state, j);
+      Delete(state, j);
 end;

@@ -1,6 +1,5 @@
-{ Ковертирует матрицу состояния в графическое представление и отображает его
-  по центру консоли. }
-procedure Print(var display: TMatrix);
+{ console_render.pas }
+procedure ConsoleRender(var display: TMatrix);
 var
   i, j, w, h: integer;
   indent_x, indent_y: integer;
