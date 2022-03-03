@@ -11,7 +11,8 @@ begin
           exit;
         end;
         tmp[i, j + 1] := tmp[i, j];
-        if tmp[i, j - 1] = 0 then
+        if (tmp[i, j - 1] = 0) or
+           (tmp[i, j - 1] = 3) then
           tmp[i, j] := 0;
       end;
   Down := True;

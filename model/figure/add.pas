@@ -17,10 +17,10 @@ var
   origin: integer;
 begin
   origin := Length(state) div 2;
-  state[origin + 1, 0] := 2;
-  state[origin + 1, 1] := 2;
-  state[origin + 1, 2] := 2;
-  state[origin + 1, 3] := 2;
+  state[origin, 0] := 2;
+  state[origin, 1] := 2;
+  state[origin, 2] := 2;
+  state[origin, 3] := 2;
 end;
 
 { Добавляет на матрицу состояния фигуру O. }
@@ -76,7 +76,7 @@ procedure AddS(var state: TMatrix);
 var
   origin: integer;
 begin
-  origin := Length(state[0]) div 2;
+  origin := Length(state) div 2;
   state[origin + 1, 2] := 2;
   state[origin + 2, 2] := 2;
   state[origin,     3] := 2;

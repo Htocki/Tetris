@@ -9,7 +9,7 @@ type
 {$I model/update.pas}
 
 const
-  width = 30;
+  width = 24;
   height = 30;
 var
   key: TKey;
@@ -23,7 +23,7 @@ begin
     end;
     Update(state);
     fieGetDisplayArea(state, display);
-    ConsoleRender(display);
+    ConsoleRender(state);
     Delay(116);
   end
 end.
