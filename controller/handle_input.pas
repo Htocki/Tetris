@@ -1,20 +1,24 @@
 { handle_input.pas }
-function HandleInput(): TKey;
+procedure HandleInput(var key: TKey);
 var
   ch: char;
 begin
+  if not KeyPressed then begin
+    key := NonPressed;
+    exit;
+  end;
   ch := ReadKey;
   case ch of
     #0: begin { Обработка символов с расширенным кодом }
       ch := ReadKey;
       case ch of
-        #75: HandleInput := Left;
-        #77: HandleInput := Right;
-        #72: HandleInput := Up;
-        #80: HandleInput := Down;
+        #75: key := Left;
+        #77: key := Right;
+        #72: key := Up;
+        #80: key := Down;
       end
     end;
-    ' ': HandleInput := Space;
-    #27: HandleInput := Escape;
+    ' ': key := Space;
+    #27: key := Escape;
   end
 end;

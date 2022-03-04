@@ -15,13 +15,11 @@ var
   key: TKey;
   state, display: TMatrix;
 begin
+  key := NonPressed;
   fieAdd(state, width, height);
   while true do begin
-    if KeyPressed then begin
-      key := HandleInput();
-      UpdateInput(state, key);
-    end;
-    Update(state);
+    HandleInput(key);
+    Update(state, key);
     fieGetDisplayArea(state, display);
     ConsoleRender(state);
     Delay(116);
