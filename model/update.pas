@@ -5,7 +5,7 @@ begin
   case k of
     Left: figMoveLeft(state);
     Right: figMoveRight(state);
-    Up: ;
+    Up: figRotateRight(state);
     Down: ;
     Space: ;
     Escape: halt;
