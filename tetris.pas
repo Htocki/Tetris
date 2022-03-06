@@ -4,6 +4,7 @@ program Tetris;
 uses crt, field, figure, matrix;
 type
   TKey = (Up, Down, Left, Right, Escape, Space, NonPressed);
+  TGameState = (Paused, Runned);
 
 {$I view/console_render.pas}
 {$I controller/handle_input.pas}
@@ -15,12 +16,14 @@ const
 var
   key: TKey;
   state, display: TMatrix;
+  game_state: TGameState;
 begin
   key := NonPressed;
+  game_state := Runned;
   fieAdd(state, width, height);
   while true do begin
     HandleInput(key);
-    Update(state, key);
+    Update(state, game_state, key);
     fieGetDisplayArea(state, display);
     ConsoleRender(state);
     Delay(116);
