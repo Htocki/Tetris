@@ -3,8 +3,8 @@
 program Tetris;
 uses crt, field, figure, matrix;
 type
-  TKey = (Up, Down, Left, Right, Escape, Space, NonPressed);
-  TGameState = (Paused, Runned);
+  TKey = (Up, Down, Left, Right, Enter, Escape, Space, NonPressed);
+  TGameState = (Paused, Runned, Finished);
 
 {$I view/console_render.pas}
 {$I controller/handle_input.pas}

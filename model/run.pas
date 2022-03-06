@@ -12,8 +12,10 @@ begin
   end;
   { Автоматическое движение фигуры вниз. }
   if not figMoveDown(state) then begin
-    if figIsOnTop(state) then { Обработка ситуации конца игры. }
+    if figIsOnTop(state) then begin { Обработка ситуации конца игры. }
+    game_state := Finished;
       exit;
+    end;
     figDeactivate(state);
     fieDeleteFilledLine(state);
     figAdd(state);

@@ -21,5 +21,6 @@ begin
     end;
     ' ': key := Space;
     #27: key := Escape;
+    #13: key := Enter;
   end
 end;
