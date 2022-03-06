@@ -7,7 +7,7 @@ begin
     Left: figMoveLeft(state);
     Right: figMoveRight(state);
     Up: figRotateRight(state);
-    Down: ;
+    Down: figMoveDownToTheBarrier(state);
     Space: ;
     Escape: halt;
   end;
