@@ -1,4 +1,5 @@
 { is_figure_z.pas }
+
 function IsFigureZTop(var sample: TMatrix): boolean;
 begin
   IsFigureZTop := True; { Заглушка. }

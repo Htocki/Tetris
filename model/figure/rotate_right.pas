@@ -1,4 +1,5 @@
 { rotate_right.pas }
+
 type
   TFigure = (JTop, JRight, JDown, JLeft, ITop, IRight, IDown, ILeft, O, LTop,
              LRight, LDown, LLeft, ZTop, ZRight, ZDown, ZLeft, TTop, TRight,

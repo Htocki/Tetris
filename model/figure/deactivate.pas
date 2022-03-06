@@ -1,4 +1,5 @@
 { deactivate.pas }
+
 procedure figDeactivate(var state: TMatrix);
 var
   i, j: integer;

@@ -1,7 +1,5 @@
 { add.pas }
-{ Заполняет матрицу состояния:
-  0 (нули) - пустая область;
-  1 (единицы) - граница игровой области. }
+
 procedure fieAdd(var state: TMatrix; width, height: integer);
 const
   generation_area_height = 4;

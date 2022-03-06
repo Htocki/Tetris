@@ -1,4 +1,5 @@
 { handle_input.pas }
+
 procedure HandleInput(var key: TKey);
 var
   ch: char;

@@ -1,4 +1,5 @@
 { add.pas }
+
 { Добавляет на матрицу состояния фигуру J. }
 procedure AddJ(var state: TMatrix);
 var

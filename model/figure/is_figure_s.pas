@@ -1,4 +1,5 @@
 { is_figure_s.pas }
+
 function IsFigureSTop(var sample: TMatrix): boolean;
 begin
   IsFigureSTop := True; { Заглушка. }

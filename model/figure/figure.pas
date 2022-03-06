@@ -1,4 +1,5 @@
 { figure.pas }
+
 unit figure;
 
 interface

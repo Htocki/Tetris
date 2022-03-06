@@ -1,4 +1,5 @@
 { is_on_top.pas }
+
 function figIsOnTop(var state: TMatrix): boolean;
 var
   i: integer;

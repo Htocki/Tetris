@@ -1,4 +1,5 @@
 { delete_line.pas }
+
 function IsLineFilled(var state: TMatrix; j: integer): boolean;
 var
   i: integer;

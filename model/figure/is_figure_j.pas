@@ -1,4 +1,5 @@
 { is_figure_j.pas }
+
 function IsFigureJTop(var sample: TMatrix): boolean;
 begin
   IsFigureJTop := True; { Заглушка. }

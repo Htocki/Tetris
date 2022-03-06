@@ -1,4 +1,5 @@
 { get_display_area.pas }
+
 procedure fieGetDisplayArea(var state: TMatrix; var display: TMatrix);
 const
   generation_area_height = 4;

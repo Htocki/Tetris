@@ -1,4 +1,5 @@
 { move_right.pas }
+
 function Right(var tmp: TMatrix): boolean;
 var
   i, j: integer;
