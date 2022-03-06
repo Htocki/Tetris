@@ -2,5 +2,7 @@ model/field/field.o
 model/field/field.ppu
 model/figure/figure.o
 model/figure/figure.ppu
+utility/matrix/matrix.o
+utility/matrix/matrix.ppu
 tetris.o
 tetris
