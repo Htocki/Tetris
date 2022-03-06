@@ -7,7 +7,10 @@ begin
     Right: figMoveRight(state);
     Up: figRotateRight(state);
     Down: figMoveDownToTheBarrier(state);
-    Space: game_state := Paused;
+    Space: begin
+      game_state := Paused;
+      exit;
+    end;
     Escape: halt;
   end;
   { Автоматическое движение фигуры вниз. }
