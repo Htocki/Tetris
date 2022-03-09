@@ -1,31 +1,19 @@
 { tetris.pas }
 
 program Tetris;
-uses crt, field, figure, matrix;
-type
-  TKey = (Up, Down, Left, Right, Enter, Escape, Space, NonPressed);
-  TGameState = (Paused, Runned, Finished);
+uses crt, UConsole, UKey, UKeyboard, UMatrix, UModel, UState;  
 
-{$I view/console_render.pas}
-{$I controller/handle_input.pas}
-{$I model/update.pas}
-
-const
-  width = 24;
-  height = 30;
 var
   key: TKey;
-  state, display: TMatrix;
-  game_state: TGameState;
-begin
-  key := NonPressed;
-  game_state := Runned;
-  fieAdd(state, width, height);
+  matrix, rendering_area: TMatrix;
+  state: TState;
+begin;
+  modInitialize(matrix, state, key);
   while true do begin
-    HandleInput(key);
-    Update(state, game_state, key);
-    fieGetDisplayArea(state, display);
-    ConsoleRender(state);
+    keyHandleInput(key);
+    modUpdate(matrix, state, key);
+    modGetRenderingArea(matrix, rendering_area);
+    conRender(rendering_area, state);
     Delay(116);
   end
 end.
