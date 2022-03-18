@@ -13,7 +13,7 @@ begin;
     keyHandleInput(key);
     modUpdate(matrix, state, key);
     modGetRenderingArea(matrix, rendering_area);
-    conRender(rendering_area, state);
+    conRender(matrix, state);
     Delay(116);
   end
 end.

@@ -13,7 +13,10 @@ begin
     end;
     k_Escape: begin
       state := s_MenuStart;
-      fieRestart(matrix);
+      matClear(matrix);
+      fieAdd(matrix, Length(matrix), Length(matrix[0]) - 4);
+      figAdd(matrix);
+      tarAdd(matrix);
       exit;
     end;
   end;
@@ -26,4 +29,5 @@ begin
     fieDeleteFilledLine(matrix);
     figAdd(matrix);
   end;
+  tarAdd(matrix);
 end;

@@ -8,4 +8,6 @@ begin
   key := k_None;
   state := s_MenuStart;
   fieAdd(matrix, width, height);
+  figAdd(matrix);
+  tarAdd(matrix);
 end;

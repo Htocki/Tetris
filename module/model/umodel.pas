@@ -3,7 +3,7 @@
 unit UModel;
 
 interface
-uses crt, UField, UFigure, UMatrix, UKey, UState;
+uses crt, UField, UFigure, UMatrix, UKey, UState, UTarget;
 procedure modGetRenderingArea(var matrix: TMatrix;
                               var rendering_area: TMatrix);
 procedure modInitialize(var matrix: TMatrix; var state: TState; var key: TKey);

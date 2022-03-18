@@ -20,6 +20,4 @@ begin
     matrix[0, j] := 1;
     matrix[width - 1, j] := 1;
   end;
-  { Добавление фигуры. }
-  figAdd(matrix);
 end;

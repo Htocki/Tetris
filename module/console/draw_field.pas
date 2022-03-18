@@ -20,6 +20,9 @@ begin
       end else if matrix[i, j] = 3 then begin
         TextColor(Yellow);
         Write('H');
+      end else if matrix[i, j] = 4 then begin
+        TextColor(Magenta);
+        Write('H');
       end;
     end;
   GotoXY(1, 1);
