@@ -1,14 +1,11 @@
 { draw_pause.pas }
 
-procedure DrawPause;
-var
-  x, y: integer;
-  item: string = 'PAUSE';
+procedure DrawPause(var renderer: TRenderer);
 begin
-  x := ScreenWidth div 2 - Length(item) div 2;
-  y := ScreenHeight div 2 - 1;
-  GotoXY(x, y);
-  TextColor(Red);
-  Write(item);
+  TextColor(Red or Blink);
+  GotoXY(
+    renderer.field.center.x - Length('PAUSE') div 2,
+    renderer.field.center.y - 1);
+  Write('PAUSE');
   GotoXY(1, 1);
 end;

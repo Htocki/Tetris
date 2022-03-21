@@ -1,28 +1,22 @@
 { draw_frame.pas }
 
-procedure DrawFrame(var matrix: TMatrix);
+procedure DrawFrame(var renderer: TRenderer);
 var
-  i, j, width, height, left, right, top, down: integer;
+  i, j: integer;
 begin
-  width := Length(matrix);
-  height := Length(matrix[0]);
-  left := ScreenWidth div 2 - width div 2;
-  right := left + width - 1;
-  top := ScreenHeight div 2 - height div 2;
-  down := top + height - 1;
   TextColor(Green);
-  { Вертикальные линии. }
-  for i := 0 to width - 1 do begin
-    GotoXY(i + left, top);
+  for i := 0 to renderer.width do begin
+    GotoXY(renderer.position.x + i, renderer.position.y);
     Write('H');
-    GotoXY(i + left, down);
+    GotoXY(
+      renderer.position.x + i,
+      renderer.position.y + renderer.height);
     Write('H');
   end;
-  { Горизонтальные линии. }
-  for j := 0 to height - 1 do begin
-    GotoXY(left, j + top);
+  for j := 0 to renderer.height do begin
+    GotoXY(renderer.position.x, renderer.position.y + j);
     Write('H');
-    GotoXY(right, j + top);
+    GotoXY(renderer.position.x + renderer.width, renderer.position.y + j);
     Write('H');
   end;
   GotoXY(1, 1);

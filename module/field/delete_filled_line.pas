@@ -1,4 +1,4 @@
-{ delete_line.pas }
+{ delete_filled_line.pas }
 
 function IsLineFilled(var matrix: TMatrix; j: integer): boolean;
 var
@@ -21,11 +21,15 @@ begin
       matrix[i, j] := matrix[i, j - 1];
 end;
 
-procedure fieDeleteFilledLine(var matrix: TMatrix);
+function fieDeleteFilledLine(var matrix: TMatrix): boolean;
 var
   j: integer;
 begin
   for j := 4 to Length(matrix[0]) - 2 do
-    if IsLineFilled(matrix, j) then
+    if IsLineFilled(matrix, j) then begin
       Delete(matrix, j);
+      fieDeleteFilledLine := True;
+      exit;
+    end;
+  fieDeleteFilledLine := False;
 end;

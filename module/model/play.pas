@@ -1,6 +1,7 @@
 { play.pas }
 
-procedure Play(var matrix: TMatrix; var state: TState; key: TKey);
+procedure Play(
+  var matrix: TMatrix; var state: TState; key: TKey; var user: TUser);
 begin
   case key of
     k_Left: figMoveLeft(matrix);
@@ -13,8 +14,9 @@ begin
     end;
     k_Escape: begin
       state := s_MenuStart;
+      user.score := 0;
       matClear(matrix);
-      fieAdd(matrix, Length(matrix), Length(matrix[0]) - 4);
+      fieAdd(matrix, Length(matrix), Length(matrix[0]));
       figAdd(matrix);
       tarAdd(matrix);
       exit;
@@ -26,7 +28,8 @@ begin
       exit;
     end;
     figDeactivate(matrix);
-    fieDeleteFilledLine(matrix);
+    if fieDeleteFilledLine(matrix) then
+      Inc(user.score);
     figAdd(matrix);
   end;
   tarAdd(matrix);

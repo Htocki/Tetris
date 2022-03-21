@@ -3,8 +3,8 @@
 unit UConsole;
 
 interface
-uses crt, UMatrix, UState;
-procedure conRender(var matrix: TMatrix; state: TState);
+uses crt, sysutils, UMatrix, UState, UUser;
+procedure conRender(var matrix: TMatrix; state: TState; var user: TUser);
 
 implementation
 {$I render.pas}

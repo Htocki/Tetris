@@ -5,10 +5,10 @@ unit UField;
 interface
 uses UFigure, UMatrix;
 procedure fieAdd(var matrix: TMatrix; width, height: integer);
-procedure fieDeleteFilledLine(var matrix: TMatrix);
+function fieDeleteFilledLine(var matrix: TMatrix): boolean;
 
 implementation
 {$I add.pas}
-{$I delete_line.pas}
+{$I delete_filled_line.pas}
 
 end.

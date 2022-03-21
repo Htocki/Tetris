@@ -1,14 +1,11 @@
 { draw_finish.pas }
 
-procedure DrawFinish;
-var
-  x, y: integer;
-  item: string = 'GAME OVER';
+procedure DrawFinish(var renderer: TRenderer);
 begin
-  x := ScreenWidth div 2 - Length(item) div 2;
-  y := ScreenHeight div 2 - 1;
-  GotoXY(x, y);
-  TextColor(Red);
-  Write(item);
+  TextColor(Red or Blink);
+  GotoXY(
+    renderer.field.center.x - Length('GAME OVER') div 2,
+    renderer.field.center.y - 1);
+  Write('GAME OVER');
   GotoXY(1, 1);
 end;
