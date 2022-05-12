@@ -1,6 +1,6 @@
 { activate_figure.pas }
 
-{$I fill.pas}
+{$I is_figure_o.pas}
 {$I is_figure_i.pas}
 {$I is_figure_j.pas}
 {$I is_figure_l.pas}
@@ -8,113 +8,116 @@
 {$I is_figure_t.pas}
 {$I is_figure_z.pas}
 
-function ActiveFigure(var tmp: TMatrix): TFigure;
+function ActiveFigure(var tmp: TMatrix; origin: TOrigin): TFigure;
 var
   i, j: integer;
-  sample: TMatrix;
 begin
   for i := Length(tmp) - 2 to 1 do
     for j := Length(tmp[0]) - 2 to 1 do begin
-      Fill(sample);
+      { O }
+      if IsFigureO(tmp, origin) then begin
+        ActiveFigure := O;
+        exit;
+      end;
       { I }
-      if IsFigureITop(sample) then begin
+      if IsFigureITop(tmp, origin) then begin
         ActiveFigure := ITop;
         exit;
       end;
-      if IsFigureIRight(sample) then begin
+      if IsFigureIRight(tmp, origin) then begin
         ActiveFigure := IRight;
         exit;
       end;
-      if IsFigureIDown(sample) then begin
+      if IsFigureIDown(tmp, origin) then begin
         ActiveFigure := IDown;
         exit;
       end;
-      if IsFigureILeft(sample) then begin
+      if IsFigureILeft(tmp, origin) then begin
         ActiveFigure := ILeft;
         exit;
       end;
       { J }
-      if IsFigureJTop(sample) then begin
+      if IsFigureJTop(tmp, origin) then begin
         ActiveFigure := JTop;
         exit;
       end;
-      if IsFigureJRight(sample) then begin
+      if IsFigureJRight(tmp, origin) then begin
         ActiveFigure := JRight;
         exit;
       end;
-      if IsFigureJDown(sample) then begin
+      if IsFigureJDown(tmp, origin) then begin
         ActiveFigure := JDown;
         exit;
       end;
-      if IsFigureJLeft(sample) then begin
+      if IsFigureJLeft(tmp, origin) then begin
         ActiveFigure := JLeft;
         exit;
       end;
       { L }
-      if IsFigureLTop(sample) then begin
+      if IsFigureLTop(tmp, origin) then begin
         ActiveFigure := LTop;
         exit;
       end;
-      if IsFigureLRight(sample) then begin
+      if IsFigureLRight(tmp, origin) then begin
         ActiveFigure := LRight;
         exit;
       end;
-      if IsFigureLDown(sample) then begin
+      if IsFigureLDown(tmp, origin) then begin
         ActiveFigure := LDown;
         exit;
       end;
-      if IsFigureLLeft(sample) then begin
+      if IsFigureLLeft(tmp, origin) then begin
         ActiveFigure := LLeft;
         exit;
       end;
       { S }
-      if IsFigureSTop(sample) then begin
+      if IsFigureSTop(tmp, origin) then begin
         ActiveFigure := STop;
         exit;
       end;
-      if IsFigureSRight(sample) then begin
+      if IsFigureSRight(tmp, origin) then begin
         ActiveFigure := SRight;
         exit;
       end;
-      if IsFigureSDown(sample) then begin
+      if IsFigureSDown(tmp, origin) then begin
         ActiveFigure := SDown;
         exit;
       end;
-      if IsFigureSLeft(sample) then begin
+      if IsFigureSLeft(tmp, origin) then begin
         ActiveFigure := SLeft;
         exit;
       end;
       { T }
-      if IsFigureTTop(sample) then begin
+      if IsFigureTTop(tmp, origin) then begin
         ActiveFigure := TTop;
         exit;
       end;
-      if IsFigureTRight(sample) then begin
+      if IsFigureTRight(tmp, origin) then begin
         ActiveFigure := TRight;
         exit;
       end;
-      if IsFigureTDown(sample) then begin
+      if IsFigureTDown(tmp, origin) then begin
         ActiveFigure := TDown;
         exit;
       end;
-      if IsFigureTLeft(sample) then begin
+      if IsFigureTLeft(tmp, origin) then begin
         ActiveFigure := TLeft;
         exit;
       end;
       { Z }
-      if IsFigureZTop(sample) then begin
+      if IsFigureZTop(tmp, origin) then begin
         ActiveFigure := ZTop;
         exit;
       end;
-      if IsFigureZRight(sample) then begin
+      if IsFigureZRight(tmp, origin) then begin
         ActiveFigure := ZRight;
         exit;
       end;
-      if IsFigureZDown(sample) then begin
+      if IsFigureZDown(tmp, origin) then begin
         ActiveFigure := ZDown;
         exit;
       end;
-      if IsFigureZLeft(sample) then begin
+      if IsFigureZLeft(tmp, origin) then begin
         ActiveFigure := ZLeft;
         exit;
       end;

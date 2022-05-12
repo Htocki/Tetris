@@ -1,21 +1,37 @@
 { is_figure_j.pas }
 
-function IsFigureJTop(var sample: TMatrix): boolean;
+function IsFigureJTop(var tmp: TMatrix; origin: TOrigin): boolean;
 begin
-  IsFigureJTop := True; { Заглушка. }
+  IsFigureJTop :=
+    (tmp[origin.x + 1, origin.y]     = 2) and
+    (tmp[origin.x + 1, origin.y + 1] = 2) and
+    (tmp[origin.x + 1, origin.y + 2] = 2) and
+    (tmp[origin.x,     origin.y + 2] = 2);
 end;
 
-function IsFigureJRight(var sample: TMatrix): boolean;
+function IsFigureJRight(var tmp: TMatrix; origin: TOrigin): boolean;
 begin
-  IsFigureJRight := True; { Заглушка. }
+  IsFigureJRight :=
+    (tmp[origin.x,     origin.y]     = 2) and
+    (tmp[origin.x,     origin.y + 1] = 2) and
+    (tmp[origin.x + 1, origin.y + 1] = 2) and
+    (tmp[origin.x + 2, origin.y + 1] = 2);
 end;
 
-function IsFigureJDown(var sample: TMatrix): boolean;
+function IsFigureJDown(var tmp: TMatrix; origin: TOrigin): boolean;
 begin
-  IsFigureJDown := True; { Заглушка. }
+  IsFigureJDown :=
+    (tmp[origin.x,     origin.y]     = 2) and
+    (tmp[origin.x + 1, origin.y]     = 2) and
+    (tmp[origin.x,     origin.y + 1] = 2) and
+    (tmp[origin.x,     origin.y + 2] = 2);
 end;
 
-function IsFigureJLeft(var sample: TMatrix): boolean;
+function IsFigureJLeft(var tmp: TMatrix; origin: TOrigin): boolean;
 begin
-  IsFigureJLeft := True; { Заглушка. }
+  IsFigureJLeft :=
+    (tmp[origin.x,     origin.y]     = 2) and
+    (tmp[origin.x + 1, origin.y]     = 2) and
+    (tmp[origin.x + 2, origin.y]     = 2) and
+    (tmp[origin.x + 2, origin.y + 1] = 2);
 end;

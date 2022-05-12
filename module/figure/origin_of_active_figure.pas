@@ -1,10 +1,21 @@
 { origin_of_active_figure.pas }
 
-function OriginOfActiveFigure(var tmp: TMatrix; figure: TFigure): TOrigin;
+function OriginOfActiveFigure(var tmp: TMatrix): TOrigin;
 var
   origin: TOrigin;
+  i: integer;
 begin
-  origin.x := 1; { Заглушка. }
-  origin.y := 1; { Заглушка. }
-  OriginOfActiveFigure := origin; { Заглушка. }
+  origin.x := 1;
+  origin.y := 1;
+  for i := 1 to Length(tmp) - 2 do
+    if tmp[origin.x, origin.y] = 2 then begin
+      origin.x := i;
+      break;
+    end;
+  for i := 4 to Length(tmp) - 2 do
+    if tmp[origin.x, origin.y] = 2 then begin
+      origin.y := i;
+      break;
+    end;
+  OriginOfActiveFigure := origin;
 end;

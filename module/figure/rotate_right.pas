@@ -11,6 +11,7 @@ type
 
 {$I active_figure.pas}
 {$I origin_of_active_figure.pas}
+{$I delete_active_figure.pas}
 {$I set_figure_i.pas}
 {$I set_figure_j.pas}
 {$I set_figure_l.pas}
@@ -23,8 +24,8 @@ var
   figure: TFigure;
   origin: TOrigin;
 begin
-  figure := ActiveFigure(tmp);
-  origin := OriginOfActiveFigure(tmp, figure);
+  origin := OriginOfActiveFigure(tmp);
+  figure := ActiveFigure(tmp, origin);
   case figure of
     JTop:   RotateRight := SetFigureJRight(tmp, origin);
     JRight: RotateRight := SetFigureJDown(tmp, origin);
