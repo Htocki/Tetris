@@ -9,6 +9,9 @@ type
     score: integer;
   end;
 
+  procedure useDefaultInitialize(var user: TUser);
+
 implementation
+{$I default_initialize.pas}
 
 end.

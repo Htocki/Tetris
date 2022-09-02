@@ -9,7 +9,11 @@ var
   user: TUser;
   start: TDateTime;
 begin;
-  modInitialize(matrix, state, key, user);
+  // Инициализация сущностей значениями по-умолчанию
+  keyDefaultInitialize(key);
+  useDefaultInitialize(user);
+  modDefaultInitialize(matrix, state);
+  // Главный цикл
   while true do begin
     start := Now;
     keyHandleInput(key);
