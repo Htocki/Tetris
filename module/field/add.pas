@@ -6,9 +6,7 @@ var
 begin
   SetLength(matrix, width, height);
   { Заполнение всей матрицы состояния нулями. }
-  for i := 0 to width - 1 do
-    for j := 0 to height - 1 do
-      matrix[i, j] := 0;
+  matClear(matrix);
   { Добавление нижней границы карты. }
   for i := 0 to width - 1 do
     matrix[i, height - 1] := 1;

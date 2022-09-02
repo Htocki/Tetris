@@ -4,8 +4,8 @@ function Down(var tmp: TMatrix): boolean;
 var
   i, j: integer;
 begin
-  for i := Length(tmp) - 1 downto 0 do
-    for j := Length(tmp[0]) - 1 downto 0 do
+  for i := matWidth(tmp) - 1 downto 0 do
+    for j := matHeight(tmp) - 1 downto 0 do
       if tmp[i, j] = 2 then begin
         if (tmp[i, j + 1] = 1) or (tmp[i, j + 1] = 3) then begin
           Down := False;

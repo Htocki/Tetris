@@ -7,7 +7,7 @@ begin
     k_Enter: begin
       matClear(matrix);
       user.score := 0;
-      fieAdd(matrix, Length(matrix), Length(matrix[0]));
+      fieAdd(matrix, matWidth(matrix), matHeight(matrix));
       figAdd(matrix);
       tarAdd(matrix);
       state := s_PlayStart;
@@ -16,7 +16,7 @@ begin
     k_Escape: begin
       matClear(matrix);
       user.score := 0;
-      fieAdd(matrix, Length(matrix), Length(matrix[0]));
+      fieAdd(matrix, matWidth(matrix), matHeight(matrix));
       figAdd(matrix);
       tarAdd(matrix);
       state := s_MenuStart;

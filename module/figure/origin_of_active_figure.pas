@@ -7,12 +7,12 @@ var
 begin
   origin.x := 1;
   origin.y := 1;
-  for i := 1 to Length(tmp) - 2 do
+  for i := 1 to matWidth(tmp) - 2 do
     if tmp[origin.x, origin.y] = 2 then begin
       origin.x := i;
       break;
     end;
-  for i := 4 to Length(tmp) - 2 do
+  for i := 4 to matWidth(tmp) - 2 do
     if tmp[origin.x, origin.y] = 2 then begin
       origin.y := i;
       break;

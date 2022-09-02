@@ -4,8 +4,8 @@ function Left(var tmp: TMatrix): boolean;
 var
   i, j: integer;
 begin
-  for i := 0 to Length(tmp) - 1 do
-    for j := 0 to Length(tmp[0]) - 1 do
+  for i := 0 to matWidth(tmp) - 1 do
+    for j := 0 to matHeight(tmp) - 1 do
       if tmp[i, j] = 2 then begin
         if (tmp[i - 1, j] = 1) or (tmp[i - 1, j] = 3) then begin
           Left := False;

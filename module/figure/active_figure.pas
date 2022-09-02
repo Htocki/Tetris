@@ -12,8 +12,8 @@ function ActiveFigure(var tmp: TMatrix; origin: TOrigin): TFigure;
 var
   i, j: integer;
 begin
-  for i := Length(tmp) - 2 to 1 do
-    for j := Length(tmp[0]) - 2 to 1 do begin
+  for i := matWidth(tmp) - 2 to 1 do
+    for j := matHeight(tmp) - 2 to 1 do begin
       { O }
       if IsFigureO(tmp, origin) then begin
         ActiveFigure := O;

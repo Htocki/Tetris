@@ -4,7 +4,7 @@ function figIsOnTop(var matrix: TMatrix): boolean;
 var
   i: integer;
 begin
-  for i := 1 to Length(matrix) - 2 do
+  for i := 1 to matWidth(matrix) - 2 do
     if matrix[i, 3] = 2 then begin
       figIsOnTop := True;
       exit;

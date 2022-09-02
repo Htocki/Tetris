@@ -16,7 +16,7 @@ begin
       state := s_MenuStart;
       user.score := 0;
       matClear(matrix);
-      fieAdd(matrix, Length(matrix), Length(matrix[0]));
+      fieAdd(matrix, matWidth(matrix), matHeight(matrix));
       figAdd(matrix);
       tarAdd(matrix);
       exit;

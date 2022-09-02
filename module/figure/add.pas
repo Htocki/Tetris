@@ -5,7 +5,7 @@ procedure AddJ(var matrix: TMatrix);
 var
   origin: integer;
 begin
-  origin := Length(matrix) div 2;
+  origin := matWidth(matrix) div 2;
   matrix[origin + 1, 1] := 2;
   matrix[origin + 1, 2] := 2;
   matrix[origin + 0, 3] := 2;
@@ -17,7 +17,7 @@ procedure AddI(var matrix: TMatrix);
 var
   origin: integer;
 begin
-  origin := Length(matrix) div 2;
+  origin := matWidth(matrix) div 2;
   matrix[origin, 0] := 2;
   matrix[origin, 1] := 2;
   matrix[origin, 2] := 2;
@@ -29,7 +29,7 @@ procedure AddO(var matrix: TMatrix);
 var
   origin: integer;
 begin
-  origin := Length(matrix) div 2;
+  origin := matWidth(matrix) div 2;
   matrix[origin,     2] := 2;
   matrix[origin + 1, 2] := 2;
   matrix[origin    , 3] := 2;
@@ -41,7 +41,7 @@ procedure AddL(var matrix: TMatrix);
 var
   origin: integer;
 begin
-  origin := Length(matrix) div 2;  
+  origin := matWidth(matrix) div 2;  
   matrix[origin,     1] := 2;
   matrix[origin,     2] := 2;
   matrix[origin,     3] := 2;
@@ -53,7 +53,7 @@ procedure AddZ(var matrix: TMatrix);
 var
   origin: integer;
 begin
-  origin := Length(matrix) div 2;
+  origin := matWidth(matrix) div 2;
   matrix[origin,     2] := 2;
   matrix[origin + 1, 2] := 2;
   matrix[origin + 1, 3] := 2;
@@ -65,7 +65,7 @@ procedure AddT(var matrix: TMatrix);
 var
   origin: integer;
 begin
-  origin := Length(matrix) div 2;
+  origin := matWidth(matrix) div 2;
   matrix[origin + 1, 2] := 2;
   matrix[origin,     3] := 2;
   matrix[origin + 1, 3] := 2;
@@ -77,7 +77,7 @@ procedure AddS(var matrix: TMatrix);
 var
   origin: integer;
 begin
-  origin := Length(matrix) div 2;
+  origin := matWidth(matrix) div 2;
   matrix[origin + 1, 2] := 2;
   matrix[origin + 2, 2] := 2;
   matrix[origin,     3] := 2;
