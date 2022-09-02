@@ -4,8 +4,8 @@ procedure matCopy(var wherefrom: TMatrix; var whereinto: TMatrix);
 var
   i, j, w, h: integer;
 begin
-  w := Length(wherefrom);
-  h := Length(wherefrom[0]);
+  w := matWidth(wherefrom);
+  h := matHeight(wherefrom);
   SetLength(whereinto, w, h);
   for i := 0 to w - 1 do
     for j := 0 to h - 1 do
