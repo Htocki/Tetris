@@ -16,10 +16,14 @@ begin;
   // Главный цикл
   while true do begin
     start := Now;
+    // Обработка нажатий клавиш
     keyHandleInput(key);
+    // Озменение состояния модели
     modUpdate(matrix, state, key, user);
+    // Отображение состояния модели
     modGetRenderingArea(matrix, rendering_area);
     conRender(rendering_area, state, user);
+    // Простой системы
     Delay(116 - MilliSecondsBetween(start, Now));
   end
 end.
