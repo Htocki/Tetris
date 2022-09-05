@@ -1,10 +1,10 @@
 { update.pas }
 
-{$I finish.pas}
-{$I menu_quit.pas}
-{$I menu_start.pas}
-{$I pause.pas}
-{$I play.pas}
+{$I update/finish.pas}
+{$I update/menu_quit.pas}
+{$I update/menu_start.pas}
+{$I update/pause.pas}
+{$I update/play.pas}
 
 procedure modUpdate(
   var matrix: TMatrix; var state: TState; key: TKey; var user: TUser);

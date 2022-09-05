@@ -17,8 +17,8 @@ implementation
 {$I add.pas}
 {$I deactivate.pas}
 {$I is_on_top.pas}
-{$I move_down.pas}
 {$I move_down_to_the_barrier}
+{$I move_down.pas}
 {$I move_left.pas}
 {$I move_right.pas}
 {$I rotate_right.pas}

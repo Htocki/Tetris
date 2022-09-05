@@ -11,8 +11,8 @@ function matHeight(var matrix: TMatrix): integer;
 function matWidth(var matrix: TMatrix): integer;
 
 implementation
-{$I copy.pas}
 {$I clear.pas}
+{$I copy.pas}
 {$I height.pas}
 {$I width.pas}
 

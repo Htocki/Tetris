@@ -1,12 +1,12 @@
-{ activate_figure.pas }
+{ active_figure.pas }
 
-{$I is_figure_o.pas}
-{$I is_figure_i.pas}
-{$I is_figure_j.pas}
-{$I is_figure_l.pas}
-{$I is_figure_s.pas}
-{$I is_figure_t.pas}
-{$I is_figure_z.pas}
+{$I active_figure/is_figure_i.pas}
+{$I active_figure/is_figure_j.pas}
+{$I active_figure/is_figure_l.pas}
+{$I active_figure/is_figure_o.pas}
+{$I active_figure/is_figure_s.pas}
+{$I active_figure/is_figure_t.pas}
+{$I active_figure/is_figure_z.pas}
 
 function ActiveFigure(var tmp: TMatrix; origin: TOrigin): TFigure;
 var

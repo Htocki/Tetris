@@ -35,17 +35,17 @@ type
     score: TScoreRenderer;
   end;
 
-{$I draw_field.pas}
-{$I draw_finish.pas}
-{$I draw_frame.pas}
-{$I draw_items.pas}
-{$I draw_name.pas}
-{$I draw_pause.pas}
-{$I draw_score.pas}
-{$I draw_separator.pas}
-{$I initialize.pas}
+{$I render/draw_field.pas}
+{$I render/draw_finish.pas}
+{$I render/draw_frame.pas}
+{$I render/draw_items.pas}
+{$I render/draw_name.pas}
+{$I render/draw_pause.pas}
+{$I render/draw_score.pas}
+{$I render/draw_separator.pas}
+{$I render/initialize.pas}
 
-procedure conRender(var matrix: TMatrix; state: TState; var user: TUser);
+procedure conRender(var matrix: TMatrix; var state: TState; var user: TUser);
 var
   renderer: TRenderer;
 begin

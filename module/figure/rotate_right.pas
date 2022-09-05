@@ -9,15 +9,15 @@ type
     y: integer;
   end;
 
-{$I active_figure.pas}
-{$I origin_of_active_figure.pas}
-{$I delete_active_figure.pas}
-{$I set_figure_i.pas}
-{$I set_figure_j.pas}
-{$I set_figure_l.pas}
-{$I set_figure_s.pas}
-{$I set_figure_t.pas}
-{$I set_figure_z.pas}
+{$I rotate_right/active_figure.pas}
+{$I rotate_right/delete_active_figure.pas}
+{$I rotate_right/origin_of_active_figure.pas}
+{$I rotate_right/set_figure_i.pas}
+{$I rotate_right/set_figure_j.pas}
+{$I rotate_right/set_figure_l.pas}
+{$I rotate_right/set_figure_s.pas}
+{$I rotate_right/set_figure_t.pas}
+{$I rotate_right/set_figure_z.pas}
 
 function RotateRight(var tmp: TMatrix): boolean;
 var
