@@ -10,4 +10,4 @@ begin
   for i := 0 to w - 1 do
     for j := 0 to h - 1 do
       whereinto[i, j] := wherefrom[i, j];
-    end;
+end;
