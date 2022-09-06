@@ -8,7 +8,10 @@ echo -e "\n[Compiling test for matrix.copy...]"
 fpc -Fu"./module/test/;./module/matrix/" ./test/matrix/copy.pas
 echo -e "\n[Compiling test for matrix.fill...]"
 fpc -Fu"./module/test/;./module/matrix/" ./test/matrix/fill.pas
+echo -e "\n[Compiling test for matrix.is_equal...]"
+fpc -Fu"./module/test/;./module/matrix/" ./test/matrix/is_equal.pas
 echo -e "\n[Running tests...]"
 ./test/matrix/clear
 ./test/matrix/copy
 ./test/matrix/fill
+./test/matrix/is_equal
