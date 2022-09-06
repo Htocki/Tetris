@@ -1,6 +1,6 @@
-{ clear.pas }
+{ fill.pas }
 
-program Clear;
+program Fill;
 uses UMatrix, UTest;
 var
   first, second: TMatrix;
