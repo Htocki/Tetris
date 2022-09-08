@@ -1,4 +1,5 @@
 { render.pas }
+
 type
   TPosition = record
     x: integer;
