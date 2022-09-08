@@ -2,16 +2,16 @@
 
 procedure Initialize(var matrix: TMatrix; var renderer: TRenderer);
 begin
-  renderer.position.x := (-1 + ScreenWidth - Length(matrix) - 1 - 8 - 1) div 2;
-  renderer.position.y := (-1 + ScreenHeight - Length(matrix[0]) - 1) div 2;
-  renderer.width := 1 + Length(matrix) + 1 + 8;
-  renderer.height := 1 + Length(matrix[0]);
+  renderer.position.x := (-1 + ScreenWidth - matWidth(matrix) - 1 - 8 - 1) div 2;
+  renderer.position.y := (-1 + ScreenHeight - matHeight(matrix) - 1) div 2;
+  renderer.width := 1 + matWidth(matrix) + 1 + 8;
+  renderer.height := 1 + matHeight(matrix);
   renderer.center.x := renderer.position.x + renderer.width div 2;
   renderer.center.y := renderer.position.y + renderer.height div 2;
   renderer.field.position.x := renderer.position.x + 1;
   renderer.field.position.y := renderer.position.y + 1;
-  renderer.field.width := Length(matrix);
-  renderer.field.height := Length(matrix[0]);
+  renderer.field.width := matWidth(matrix);
+  renderer.field.height := matHeight(matrix);
   renderer.field.center.x :=
     renderer.field.position.x + renderer.field.width div 2;
   renderer.field.center.y :=

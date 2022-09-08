@@ -4,9 +4,7 @@ procedure fieAdd(var matrix: TMatrix; width, height: integer);
 var
   i, j: integer;
 begin
-  SetLength(matrix, width, height);
-  { Заполнение всей матрицы состояния нулями. }
-  matClear(matrix);
+  matDefaultInitialize(matrix, width, height);
   { Добавление нижней границы карты. }
   for i := 0 to width - 1 do
     matrix[i, height - 1] := 1;
