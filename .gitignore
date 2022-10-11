@@ -1,4 +1,5 @@
-**/**/*.o
-**/**/**.ppu
-*.o
-tetris
+*
+!*.pas
+!*.sh
+!LICENCE
+!*.md
