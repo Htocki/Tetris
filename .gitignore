@@ -32,6 +32,7 @@ tetris
 **/figure/**/deactivate
 **/figure/**/delete
 **/figure/**/initialize
+**/figure/**/is_on_the_bottom
 **/figure/**/move_down
 **/figure/**/move_left
 **/figure/**/move_right
