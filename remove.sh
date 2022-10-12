@@ -76,6 +76,8 @@ rm **/figure/**/deactivate
 rm **/figure/**/deactivate.o
 rm **/figure/**/delete
 rm **/figure/**/delete.o
+rm **/figure/**/is_on_the_bottom
+rm **/figure/**/is_on_the_bottom.o
 rm **/figure/**/initialize
 rm **/figure/**/initialize.o
 rm **/figure/**/move_down

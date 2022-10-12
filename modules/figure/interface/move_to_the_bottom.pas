@@ -2,6 +2,6 @@
 
 procedure figMoveToTheBottom(var matrix: TMatrix);
 begin
-  while figMoveDown(matrix, figure) do
-    ;
+  while not figIsOnTheBottom(matrix) do
+    figMoveDown(matrix);
 end;

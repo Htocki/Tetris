@@ -35,6 +35,7 @@ fpc -vewnh -Fu"./modules/element/;./modules/figure/;./modules/matrix/;./modules/
 fpc -vewnh -Fu"./modules/element/;./modules/figure/;./modules/matrix/;./modules/test/" ./modules/figure/tests/deactivate.pas && echo -e ""
 fpc -vewnh -Fu"./modules/matrix/;./modules/test/" ./modules/figure/tests/delete.pas && echo -e ""
 fpc -vewnh -Fu"./modules/element/;./modules/figure/;./modules/matrix/;./modules/test/" ./modules/figure/tests/initialize.pas && echo -e ""
+fpc -vewnh -Fu"./modules/element/;./modules/figure/;./modules/matrix/;./modules/test/" ./modules/figure/tests/is_on_the_bottom.pas && echo -e ""
 fpc -vewnh -Fu"./modules/element/;./modules/figure/;./modules/matrix/;./modules/test/" ./modules/figure/tests/move_down.pas && echo -e ""
 fpc -vewnh -Fu"./modules/element/;./modules/figure/;./modules/matrix/;./modules/test/" ./modules/figure/tests/move_left.pas && echo -e ""
 fpc -vewnh -Fu"./modules/element/;./modules/figure/;./modules/matrix/;./modules/test/" ./modules/figure/tests/move_right.pas && echo -e ""
@@ -85,6 +86,7 @@ echo -e "\n[Running tests for figure...]"
 ./modules/figure/tests/deactivate
 ./modules/figure/tests/delete
 ./modules/figure/tests/initialize
+./modules/figure/tests/is_on_the_bottom
 ./modules/figure/tests/move_down
 ./modules/figure/tests/move_left
 ./modules/figure/tests/move_right
