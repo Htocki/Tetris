@@ -19,9 +19,9 @@ procedure figInitialize(
 procedure figMoveDown(var matrix: TMatrix);
 procedure figMoveLeft(var matrix: TMatrix);
 procedure figMoveRight(var matrix: TMatrix);
-//procedure figMoveToTheBottom(var matrix: TMatrix);
+{procedure figMoveToTheBottom(var matrix: TMatrix);}
 procedure figRotateRight(var matrix: TMatrix);
-//function figIsOnTheBottom(var matrix: TMatrix): boolean; 
+{function figIsOnTheBottom(var matrix: TMatrix): boolean;} 
 
 implementation
 {$I interface/deactivate.pas}
@@ -29,7 +29,7 @@ implementation
 {$I interface/move_down.pas}
 {$I interface/move_left.pas}
 {$I interface/move_right.pas}
-//{$I interface/move_to_the_bottom}
 {$I interface/rotate_right.pas}
+{{$I interface/move_to_the_bottom}}
 
 end.

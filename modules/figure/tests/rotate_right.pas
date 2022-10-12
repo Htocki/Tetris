@@ -25,7 +25,5 @@ begin
   after[2, 10] := 2;
   after[3, 10] := 3;
   figRotateRight(after);
-  matPrint(before);
-  matPrint(after);
   tesMessage('figure', 'rotate_right', matIsEqual(before, after));
 end.
