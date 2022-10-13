@@ -1,13 +1,13 @@
 { play.pas }
 
 procedure Play(
-  var matrix: TMatrix; var figure: TFigure; var state: TState; key: TKey; var user: TUser);
+  var matrix: TMatrix; var state: TState; key: TKey; var user: TUser);
 begin
   case key of
-    k_Left: figMoveLeft(matrix, figure);
-    k_Right: figMoveRight(matrix, figure);
-    k_Up: figRotateRight(matrix, figure);
-    k_Down: figMoveToTheBottom(matrix, figure);
+    k_Left: figMoveLeft(matrix);
+    k_Right: figMoveRight(matrix);
+    k_Up: figRotateRight(matrix);
+    k_Down: figMoveToTheBottom(matrix);
     k_Space: begin
       state := s_PlayPause;
       exit;
@@ -16,13 +16,14 @@ begin
       state := s_MenuStart;
       user.score := 0;
       matClear(matrix);
-      fieInitialize(matrix, matWidth(matrix), matHeight(matrix));
-      figInitialize(matrix, figure);
-      tarInitialize(matrix, figure);
+      fieInitialize(matrix);
+      figInitialize(matrix);
+      tarInitialize(matrix);
       exit;
     end;
   end;
-  if not figMoveDown(matrix, figure) then begin
+  figMoveDown(matrix);
+  if figIsOnTheBottom(matrix) then begin
     if fieIsTheVerticalFilled(matrix) then begin
       state := s_PlayFinish;
       exit;
@@ -30,7 +31,7 @@ begin
     figDeactivate(matrix);
     if fieDeleteFilledLine(matrix) then
       Inc(user.score);
-    figInitialize(matrix, figure);
+    figInitialize(matrix);
   end;
-  tarInitialize(matrix, figure);
+  tarInitialize(matrix);
 end;

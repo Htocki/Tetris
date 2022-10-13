@@ -1,13 +1,13 @@
 { initialize.pas }
 
-procedure modInitialize(
-  var matrix: TMatrix; var figure: TFigure; var state: TState);
+procedure modInitialize(var matrix: TMatrix; var state: TState);
 const
-  width = 24;
-  height = 34;
+  width: integer = 24;
+  height: integer = 34;
 begin
   state := s_MenuStart;
-  fieInitialize(matrix, width, height);
-  figInitialize(matrix, figure);
-  tarInitialize(matrix, figure);
+  matInitialize(matrix, width, height);
+  fieInitialize(matrix);
+  figInitialize(matrix);
+  tarInitialize(matrix);
 end;

@@ -13,19 +13,23 @@ begin
 end;
 
 procedure Delete(var matrix: TMatrix; n: integer);
+const
+  status_height: integer = 1;
 var
   i, j: integer;
 begin
-  for i := 1 to matWidth(matrix) - 2 do
+  for i := 1 to matWidth(matrix) - 2 - status_height do
     for j := n downto 4 do
       matrix[i, j] := matrix[i, j - 1];
 end;
 
 function fieDeleteFilledLine(var matrix: TMatrix): boolean;
+const
+  status_height: integer = 1;
 var
   j: integer;
 begin
-  for j := 4 to matHeight(matrix) - 2 do
+  for j := 4 to matHeight(matrix) - 2 - status_height do
     if IsLineFilled(matrix, j) then begin
       Delete(matrix, j);
       fieDeleteFilledLine := True;

@@ -3,13 +3,14 @@
 unit UModel;
 
 interface
-uses crt, UField, UFigure, UMatrix, UKey, UState, UTarget, UUser;
-procedure modInitialize(
-  var matrix: TMatrix; var figure: TFigure; var state: TState);
+uses
+  crt, UField, UFigure, UMatrix, UKey, UState, UTarget, UUser;
+  
+procedure modInitialize(var matrix: TMatrix; var state: TState);
 procedure modGetRenderingArea(
   var matrix: TMatrix; var rendering_area: TMatrix);
 procedure modUpdate(
-  var matrix: TMatrix; var figure: TFigure; var state: TState;
+  var matrix: TMatrix; var state: TState;
   key: TKey; var user: TUser);
 
 implementation

@@ -4,7 +4,7 @@ unit UField;
 
 interface
 uses UFigure, UMatrix;
-procedure fieInitialize(var matrix: TMatrix; width, height: integer);
+procedure fieInitialize(var matrix: TMatrix);
 function fieDeleteFilledLine(var matrix: TMatrix): boolean;
 function fieIsTheVerticalFilled(var matrix: TMatrix): boolean;
 

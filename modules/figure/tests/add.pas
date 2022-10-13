@@ -1,11 +1,12 @@
-{ initialize.pas }
+{ add.pas }
 
-program Initialize;
+program Add;
 uses
-  UFigure, UMatrix, UTest;
+  UElement, UFigure, UMatrix, UTest;
 var
   before, after: TMatrix;
   position: TPosition;
+  {$I ../implementation/add.pas}
 begin
   matInitialize(before, 7, 11);
   matInitialize(after, 7, 11);
@@ -19,6 +20,6 @@ begin
   before[3, 10] := 2;
   position.x := 2;
   position.y := 2;
-  figInitialize(after, S, Right, position);
-  tesMessage('figure', 'initialize', matIsEqual(before, before));
+  figAdd(after, S, Right, position);
+  tesMessage('figure', 'add', matIsEqual(before, after));
 end.

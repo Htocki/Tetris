@@ -7,9 +7,9 @@ function figNextOrientation(orientation: TOrientation): TOrientation;
 begin
   case orientation of
     Down:  figNextOrientation := Left;
-    Left:  figNextOrientation := Right;
-    Right: figNextOrientation := Top;
-    Top:   figNextOrientation := Down;
+    Left:  figNextOrientation := Top;
+    Top:   figNextOrientation := Right;
+    Right: figNextOrientation := Down;
   end;
 end;
 

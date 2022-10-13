@@ -13,14 +13,12 @@ type
   TOrientation = (Down, Left, Right, Top);
 
 procedure figDeactivate(var matrix: TMatrix);
-procedure figInitialize(
-  var matrix: TMatrix; form: TForm; orientation: TOrientation;
-  var position: TPosition);
+procedure figInitialize(var matrix: TMatrix);
 function figIsOnTheBottom(var matrix: TMatrix): boolean;
 procedure figMoveDown(var matrix: TMatrix);
 procedure figMoveLeft(var matrix: TMatrix);
 procedure figMoveRight(var matrix: TMatrix);
-{procedure figMoveToTheBottom(var matrix: TMatrix);}
+procedure figMoveToTheBottom(var matrix: TMatrix);
 procedure figRotateRight(var matrix: TMatrix);
 
 implementation
@@ -31,6 +29,6 @@ implementation
 {$I interface/move_left.pas}
 {$I interface/move_right.pas}
 {$I interface/rotate_right.pas}
-{{$I interface/move_to_the_bottom}}
+{$I interface/move_to_the_bottom}
 
 end.

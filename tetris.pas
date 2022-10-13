@@ -1,10 +1,9 @@
 { tetris.pas }
 
 program Tetris;
-uses crt, SysUtils, DateUtils, UConsole, UFigure, UKey,
+uses crt, SysUtils, DateUtils, UConsole, UKey,
      UKeyboard, UMatrix, UModel, UState, UUser;  
 var
-  figure: TFigure;
   key: TKey;
   matrix, rendering_area: TMatrix;
   state: TState;
@@ -14,14 +13,14 @@ begin;
   { Инициализация сущностей значениями по-умолчанию }
   keyInitialize(key);
   useInitialize(user);
-  modInitialize(matrix, figure, state);
+  modInitialize(matrix, state);
   { Главный цикл }
   while true do begin
     start := Now;
     { Обработка нажатий клавиш }
     keyHandleInput(key);
     { Озменение состояния модели }
-    modUpdate(matrix, figure, state, key, user);
+    modUpdate(matrix, state, key, user);
     { Отображение состояния модели }
     modGetRenderingArea(matrix, rendering_area);
     conRender(rendering_area, state, user);

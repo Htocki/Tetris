@@ -2,9 +2,6 @@
 
 # Удаляет файлов, так как модули почему-то иногда не перекомпилируются.
 
-rm tetris
-rm tetris.o
-
 rm **/console/uconsole.o
 rm **/console/uconsole.ppu
 
@@ -72,14 +69,14 @@ rm **/figure/**/add_z_right
 rm **/figure/**/add_z_right.o
 rm **/figure/**/add_z_top
 rm **/figure/**/add_z_top.o
+rm **/figure/**/add
+rm **/figure/**/add.o
 rm **/figure/**/deactivate
 rm **/figure/**/deactivate.o
 rm **/figure/**/delete
 rm **/figure/**/delete.o
 rm **/figure/**/is_on_the_bottom
 rm **/figure/**/is_on_the_bottom.o
-rm **/figure/**/initialize
-rm **/figure/**/initialize.o
 rm **/figure/**/move_down
 rm **/figure/**/move_down.o
 rm **/figure/**/move_left

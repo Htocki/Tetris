@@ -1,12 +1,12 @@
 { initialize.pas }
 
-procedure tarInitialize(var matrix: TMatrix; var figure: TFigure);
+procedure tarInitialize(var matrix: TMatrix);
 var
   i, j: integer;
   tmp: TMatrix;
 begin
   matCopy(matrix, tmp);
-  figMoveToTheBottom(matrix, figure);
+  figMoveToTheBottom(matrix);
   tarDelete(matrix);
   for i := 1 to matWidth(matrix) - 2 do
     for j := 0 to matHeight(matrix) - 2 do
