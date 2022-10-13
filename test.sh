@@ -3,7 +3,9 @@
 sh remove.sh
 
 echo -e "\n[Compiling tests...]"
-echo -e "\n[Compiling tests for figure...]"
+echo -e "\n[Compiling tests for field...]\n"
+fpc -vewn -Fu"./modules/field/;./modules/matrix/;./modules/test/" ./modules/field/tests/initialize.pas && echo -e ""
+echo -e "\n[Compiling tests for figure...]\n"
 fpc -vewn -Fu"./modules/element/;./modules/figure/;./modules/matrix/;./modules/test/" ./modules/figure/tests/add_i_down.pas && echo -e ""
 fpc -vewn -Fu"./modules/element/;./modules/figure/;./modules/matrix/;./modules/test/" ./modules/figure/tests/add_i_left.pas && echo -e ""
 fpc -vewn -Fu"./modules/element/;./modules/figure/;./modules/matrix/;./modules/test/" ./modules/figure/tests/add_i_right.pas && echo -e ""
@@ -47,13 +49,15 @@ fpc -vewn -Fu"./modules/element/;./modules/figure/;./modules/matrix/;./modules/t
 fpc -vewn -Fu"./modules/element/;./modules/figure/;./modules/matrix/;./modules/test/" ./modules/figure/tests/write_form.pas && echo -e ""
 fpc -vewn -Fu"./modules/element/;./modules/figure/;./modules/matrix/;./modules/test/" ./modules/figure/tests/write_orientation.pas && echo -e ""
 fpc -vewn -Fu"./modules/element/;./modules/figure/;./modules/matrix/;./modules/test/" ./modules/figure/tests/write_position.pas && echo -e ""
-echo -e "\n[Compiling tests for matrix...]"
+echo -e "\n[Compiling tests for matrix...]\n"
 fpc -vewn -Fu"./modules/test/;./modules/matrix/" ./modules/matrix/tests/clear.pas && echo -e ""
 fpc -vewn -Fu"./modules/test/;./modules/matrix/" ./modules/matrix/tests/copy.pas && echo -e ""
 fpc -vewn -Fu"./modules/test/;./modules/matrix/" ./modules/matrix/tests/fill.pas && echo -e ""
 fpc -vewn -Fu"./modules/test/;./modules/matrix/" ./modules/matrix/tests/is_equal.pas && echo -e ""
 
 echo -e "\n[Running tests...]"
+echo -e "\n[Running tests for field...]"
+./modules/field/tests/initialize
 echo -e "\n[Running tests for figure...]"
 ./modules/figure/tests/add_i_down
 ./modules/figure/tests/add_i_left

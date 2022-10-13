@@ -1,6 +1,7 @@
 *.o
 *.ppu
 tetris
+**/field/**/initialize
 **/figure/**/add_i_down
 **/figure/**/add_i_left
 **/figure/**/add_i_right
@@ -29,9 +30,9 @@ tetris
 **/figure/**/add_z_left
 **/figure/**/add_z_right
 **/figure/**/add_z_top
+**/figure/**/add
 **/figure/**/deactivate
 **/figure/**/delete
-**/figure/**/initialize
 **/figure/**/is_on_the_bottom
 **/figure/**/move_down
 **/figure/**/move_left
