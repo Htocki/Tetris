@@ -3,7 +3,8 @@
 unit UFigure;
 
 interface
-uses UMatrix, UElement;
+uses
+  UMatrix, UElement;
 type
   TPosition = record
     x: integer;
