@@ -13,18 +13,18 @@ begin
   after := figNextOrientation(after);
   result := before = after;
 
-  before := Right;
+  before := Top;
   after := Left;
   after := figNextOrientation(after);
   result := result and (before = after);
   
-  before := Top;
-  after := Right;
+  before := Right;
+  after := Top;
   after := figNextOrientation(after);
   result := result and (before = after);
   
   before := Down;
-  after := Top;
+  after := Right;
   after := figNextOrientation(after);
   result := result and (before = after);
 
