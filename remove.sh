@@ -10,6 +10,8 @@ rm **/element/uelement.ppu
 
 rm **/field/ufield.o
 rm **/field/ufield.ppu
+rm **/field/**/delete_filled_lines
+rm **/field/**/delete_filled_lines.o
 rm **/field/**/delete_line
 rm **/field/**/delete_line.o
 rm **/field/**/initialize

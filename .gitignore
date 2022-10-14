@@ -1,6 +1,7 @@
 *.o
 *.ppu
 tetris
+**/field/**/delete_filled_lines
 **/field/**/delete_line
 **/field/**/initialize
 **/field/**/is_filled
