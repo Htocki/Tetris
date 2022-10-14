@@ -3,7 +3,7 @@
 unit UTarget;
 
 interface
-uses UFigure, UMatrix;
+uses UMatrix;
 procedure tarInitialize(var matrix: TMatrix);
 procedure tarDelete(var matrix: TMatrix);
 

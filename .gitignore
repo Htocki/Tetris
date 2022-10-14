@@ -53,3 +53,5 @@ tetris
 **/matrix/**/copy
 **/matrix/**/fill
 **/matrix/**/is_equal
+**/target/**/delete
+**/target/**/initialize

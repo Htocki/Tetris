@@ -131,6 +131,10 @@ rm **/state/ustate.ppu
 
 rm **/target/utarget.o
 rm **/target/utarget.ppu
+rm **/target/**/delete
+rm **/target/**/delete.o
+rm **/target/**/initialize
+rm **/target/**/initialize.o
 
 rm **/test/utest.o
 rm **/test/utest.ppu

@@ -24,13 +24,12 @@ begin
   end;
   figMoveDown(matrix);
   if figIsOnTheBottom(matrix) then begin
-    if fieIsTheVerticalFilled(matrix) then begin
+    if fieIsFilled(matrix) then begin
       state := s_PlayFinish;
       exit;
     end;
     figDeactivate(matrix);
-    if fieDeleteFilledLine(matrix) then
-      Inc(user.score);
+    user.score := user.score + fieDeleteFilledLines(matrix);
     figInitialize(matrix);
   end;
   tarInitialize(matrix);

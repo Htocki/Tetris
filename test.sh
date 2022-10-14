@@ -58,6 +58,9 @@ fpc -vewn -Fu"./modules/test/;./modules/matrix/" ./modules/matrix/tests/clear.pa
 fpc -vewn -Fu"./modules/test/;./modules/matrix/" ./modules/matrix/tests/copy.pas && echo -e ""
 fpc -vewn -Fu"./modules/test/;./modules/matrix/" ./modules/matrix/tests/fill.pas && echo -e ""
 fpc -vewn -Fu"./modules/test/;./modules/matrix/" ./modules/matrix/tests/is_equal.pas && echo -e ""
+echo -e "\n[Compiling tests for target...]\n"
+fpc -vewn -Fu"./modules/target/;./modules/test/;./modules/matrix/" ./modules/target/tests/delete.pas && echo -e ""
+fpc -vewn -Fu"./modules/target/;./modules/test/;./modules/matrix/" ./modules/target/tests/initialize.pas && echo -e ""
 
 echo -e "\n[Running tests...]"
 echo -e "\n[Running tests for field...]"
@@ -115,3 +118,6 @@ echo -e "\n[Running tests for matrix...]"
 ./modules/matrix/tests/copy
 ./modules/matrix/tests/fill
 ./modules/matrix/tests/is_equal
+echo -e "\n[Running tests for target...]"
+./modules/target/tests/delete
+./modules/target/tests/initialize
