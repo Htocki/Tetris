@@ -1,8 +1,9 @@
 { tetris.pas }
 
 program Tetris;
-uses crt, SysUtils, DateUtils, UConsole, UKey,
-     UKeyboard, UMatrix, UModel, UState, UUser;  
+uses
+  crt, SysUtils, DateUtils, UConsole, UKey,
+  UKeyboard, UMatrix, UModel, UState, UUser;  
 var
   key: TKey;
   matrix, rendering_area: TMatrix;

@@ -1,7 +1,8 @@
 { clear.pas }
 
 program Clear;
-uses UMatrix, UTest;
+uses
+  UMatrix, UTest;
 var
   etalon, matrix: TMatrix;
 begin

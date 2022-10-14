@@ -3,7 +3,8 @@
 unit UElement;
 
 interface
-uses UMatrix;
+uses
+  UMatrix;
 
 function eleIsActive(var matrix: TMatrix; i, j: integer): boolean;
 function eleIsBorder(var matrix: TMatrix; i, j: integer): boolean;

@@ -3,7 +3,9 @@
 unit UKeyboard;
 
 interface
-uses crt, UKey; 
+uses
+  crt, UKey; 
+
 procedure keyHandleInput(var key: TKey);
 
 implementation

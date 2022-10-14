@@ -1,7 +1,8 @@
 { write_position.pas }
 
 program WritePosition;
-uses UFigure, UMatrix, UTest;
+uses
+  UFigure, UMatrix, UTest;
 var
   matrix: TMatrix;
   position: TPosition;

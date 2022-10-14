@@ -1,7 +1,8 @@
 { add_o_right.pas }
 
 program AddORight;
-uses UFigure, UMatrix, UElement, UTest;
+uses
+  UFigure, UMatrix, UElement, UTest;
 var
   matrix: TMatrix;
   position: TPosition;

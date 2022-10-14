@@ -1,7 +1,8 @@
 { write_form.pas }
 
 program WriteForm;
-uses UFigure, UMatrix, UTest;
+uses
+  UFigure, UMatrix, UTest;
 var
   matrix: TMatrix;
   form: TForm;

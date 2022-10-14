@@ -1,7 +1,8 @@
 { read_position.pas }
 
 program ReadPosition;
-uses UFigure, UMatrix, UTest;
+uses
+  UFigure, UMatrix, UTest;
 var
   matrix: TMatrix;
   position: TPosition;

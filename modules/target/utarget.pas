@@ -3,7 +3,9 @@
 unit UTarget;
 
 interface
-uses UMatrix;
+uses
+  UMatrix;
+
 procedure tarInitialize(var matrix: TMatrix);
 procedure tarDelete(var matrix: TMatrix);
 

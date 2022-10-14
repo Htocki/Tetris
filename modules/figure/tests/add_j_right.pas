@@ -1,7 +1,8 @@
 { add_j_right.pas }
 
 program AddJRight;
-uses UFigure, UMatrix, UElement, UTest;
+uses
+  UFigure, UMatrix, UElement, UTest;
 var
   matrix: TMatrix;
   position: TPosition;

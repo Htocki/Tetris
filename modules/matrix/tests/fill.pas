@@ -1,7 +1,8 @@
 { fill.pas }
 
 program Fill;
-uses UMatrix, UTest;
+uses
+  UMatrix, UTest;
 var
   etalon, matrix: TMatrix;
   i, j: integer;

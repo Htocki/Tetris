@@ -1,7 +1,8 @@
 { write_orientation.pas }
 
 program WriteOrientation;
-uses UFigure, UMatrix, UTest;
+uses
+  UFigure, UMatrix, UTest;
 var
   matrix: TMatrix;
   orientation: TOrientation;

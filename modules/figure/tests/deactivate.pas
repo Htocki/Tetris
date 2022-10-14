@@ -1,7 +1,8 @@
 { deactivate.pas }
 
 program Deactivate;
-uses UFigure, UMatrix, UTest;
+uses
+  UFigure, UMatrix, UTest;
 var
   etalon, matrix: TMatrix;
 begin

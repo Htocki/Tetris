@@ -1,7 +1,8 @@
 { add_j_top.pas }
 
 program AddJTop;
-uses UFigure, UMatrix, UElement, UTest;
+uses
+  UFigure, UMatrix, UElement, UTest;
 var
   matrix: TMatrix;
   position: TPosition;

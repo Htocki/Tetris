@@ -1,7 +1,8 @@
 { is_equal.pas }
 
 program IsEqual;
-uses UMatrix, UTest;
+uses
+  UMatrix, UTest;
 var
   etalon, matrix: TMatrix;
 begin

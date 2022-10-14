@@ -1,7 +1,8 @@
 { add_t_down.pas }
 
 program AddTDown;
-uses UFigure, UMatrix, UElement, UTest;
+uses
+  UFigure, UMatrix, UElement, UTest;
 var
   matrix: TMatrix;
   position: TPosition;

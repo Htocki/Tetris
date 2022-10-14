@@ -1,7 +1,8 @@
 { add_t_top.pas }
 
 program AddTTop;
-uses UFigure, UMatrix, UElement, UTest;
+uses
+  UFigure, UMatrix, UElement, UTest;
 var
   matrix: TMatrix;
   position: TPosition;

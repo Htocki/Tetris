@@ -1,7 +1,8 @@
 { add_z_top.pas }
 
 program AddZTop;
-uses UFigure, UMatrix, UElement, UTest;
+uses
+  UFigure, UMatrix, UElement, UTest;
 var
   matrix: TMatrix;
   position: TPosition;

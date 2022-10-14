@@ -1,7 +1,8 @@
 { read_orientation.pas }
 
 program ReadOrientation;
-uses UFigure, UMatrix, UTest;
+uses
+  UFigure, UMatrix, UTest;
 var
   matrix: TMatrix;
   orientation: TOrientation;

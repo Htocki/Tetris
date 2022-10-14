@@ -1,7 +1,8 @@
 { add_l_left.pas }
 
 program AddLLeft;
-uses UFigure, UMatrix, UElement, UTest;
+uses
+  UFigure, UMatrix, UElement, UTest;
 var
   matrix: TMatrix;
   position: TPosition;

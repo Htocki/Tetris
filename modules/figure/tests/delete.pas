@@ -1,7 +1,8 @@
 { delete.pas }
 
 program Delete;
-uses UMatrix, UTest;
+uses
+  UMatrix, UTest;
 var
   etalon, matrix: TMatrix;
   {$I ../implementation/delete.pas}

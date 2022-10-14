@@ -3,7 +3,9 @@
 unit UField;
 
 interface
-uses UMatrix;
+uses
+  UMatrix;
+
 procedure fieInitialize(var matrix: TMatrix);
 function fieDeleteFilledLines(var matrix: TMatrix): integer;
 function fieIsFilled(var matrix: TMatrix): boolean;
