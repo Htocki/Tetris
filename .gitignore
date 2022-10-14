@@ -3,6 +3,8 @@
 tetris
 **/field/**/delete_line
 **/field/**/initialize
+**/field/**/is_filled
+**/field/**/is_line_filled
 **/figure/**/add_i_down
 **/figure/**/add_i_left
 **/figure/**/add_i_right
