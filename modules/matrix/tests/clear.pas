@@ -3,10 +3,10 @@
 program Clear;
 uses UMatrix, UTest;
 var
-  before, after: TMatrix;
+  etalon, matrix: TMatrix;
 begin
-  matInitialize(before, 5, 5);
-  matInitialize(after, 5, 5);
-  matClear(before);
-  tesMessage('matrix', 'clear', matIsEqual(before, after));
+  matInitialize(etalon, 5, 5);
+  matInitialize(matrix, 5, 5);
+  matClear(matrix);
+  tesMessage('matrix', 'clear', matIsEqual(etalon, matrix));
 end.

@@ -4,29 +4,29 @@ program NextOrientation;
 uses
   UFigure, UTest;
 var
-  before, after: TOrientation;
+  etalon, matrix: TOrientation;
   result: boolean;
   {$I ../implementation/next_orientation.pas}
 begin
-  before := Left;
-  after := Down;
-  after := figNextOrientation(after);
-  result := before = after;
+  etalon := Left;
+  matrix := Down;
+  matrix := figNextOrientation(matrix);
+  result := etalon = matrix;
 
-  before := Top;
-  after := Left;
-  after := figNextOrientation(after);
-  result := result and (before = after);
+  etalon := Top;
+  matrix := Left;
+  matrix := figNextOrientation(matrix);
+  result := result and (etalon = matrix);
   
-  before := Right;
-  after := Top;
-  after := figNextOrientation(after);
-  result := result and (before = after);
+  etalon := Right;
+  matrix := Top;
+  matrix := figNextOrientation(matrix);
+  result := result and (etalon = matrix);
   
-  before := Down;
-  after := Right;
-  after := figNextOrientation(after);
-  result := result and (before = after);
+  etalon := Down;
+  matrix := Right;
+  matrix := figNextOrientation(matrix);
+  result := result and (etalon = matrix);
 
   tesMessage('figure', 'next_orientation', result);
 end.

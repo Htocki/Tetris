@@ -3,9 +3,9 @@
 program Copy;
 uses UMatrix, UTest;
 var
-  first, second: TMatrix;
+  etalon, matrix: TMatrix;
 begin
-  matInitialize(first, 5, 5);
-  matCopy(first, second);
-  tesMessage('matrix', 'copy', matIsEqual(first, second));
+  matInitialize(etalon, 5, 5);
+  matCopy(etalon, matrix);
+  tesMessage('matrix', 'copy', matIsEqual(etalon, matrix));
 end.

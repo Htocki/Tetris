@@ -3,11 +3,11 @@
 program IsEqual;
 uses UMatrix, UTest;
 var
-  first, second: TMatrix;
+  etalon, matrix: TMatrix;
 begin
-  SetLength(first, 5, 5);
-  SetLength(second, 5, 5);
-  matFill(first, 5);
-  matFill(second, 5);
-  tesMessage('matrix', 'is_equal', matIsEqual(first, second));
+  SetLength(etalon, 5, 5);
+  SetLength(matrix, 5, 5);
+  matFill(etalon, 5);
+  matFill(matrix, 5);
+  tesMessage('matrix', 'is_equal', matIsEqual(etalon, matrix));
 end.

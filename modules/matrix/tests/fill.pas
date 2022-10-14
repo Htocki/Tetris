@@ -3,14 +3,14 @@
 program Fill;
 uses UMatrix, UTest;
 var
-  first, second: TMatrix;
+  etalon, matrix: TMatrix;
   i, j: integer;
 begin
-  matInitialize(first, 5, 5);
-  matInitialize(second, 5, 5);
-  for i := 0 to matWidth(first) - 1 do
-    for j := 0 to matHeight(first) - 1 do
-      first[i, j] := 8;
-  matFill(second, 8);
-  tesMessage('matrix', 'fill', matIsEqual(first, second));
+  matInitialize(etalon, 5, 5);
+  matInitialize(matrix, 5, 5);
+  for i := 0 to matWidth(etalon) - 1 do
+    for j := 0 to matHeight(etalon) - 1 do
+      etalon[i, j] := 8;
+  matFill(matrix, 8);
+  tesMessage('matrix', 'fill', matIsEqual(etalon, matrix));
 end.

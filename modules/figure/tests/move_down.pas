@@ -4,26 +4,26 @@ program MoveDown;
 uses
   UFigure, UMatrix, UTest;
 var
-  before, after: TMatrix;
+  etalon, matrix: TMatrix;
 begin
-  matInitialize(before, 7, 11);
-  matInitialize(after, 7, 11);
-  before[2, 2] := 2;
-  before[2, 3] := 2;
-  before[3, 3] := 2;
-  before[3, 4] := 2;
-  before[0, 10] := 4;
-  before[1, 10] := 2;
-  before[2, 10] := 2;
-  before[3, 10] := 2;
-  after[2, 1] := 2;
-  after[2, 2] := 2;
-  after[3, 2] := 2;
-  after[3, 3] := 2;
-  after[0, 10] := 4;
-  after[1, 10] := 2;
-  after[2, 10] := 2;
-  after[3, 10] := 1;
-  figMoveDown(after);
-  tesMessage('figure', 'move_down', matIsEqual(before, after));
+  matInitialize(etalon, 7, 11);
+  matInitialize(matrix, 7, 11);
+  etalon[2, 2] := 2;
+  etalon[2, 3] := 2;
+  etalon[3, 3] := 2;
+  etalon[3, 4] := 2;
+  etalon[0, 10] := 4;
+  etalon[1, 10] := 2;
+  etalon[2, 10] := 2;
+  etalon[3, 10] := 2;
+  matrix[2, 1] := 2;
+  matrix[2, 2] := 2;
+  matrix[3, 2] := 2;
+  matrix[3, 3] := 2;
+  matrix[0, 10] := 4;
+  matrix[1, 10] := 2;
+  matrix[2, 10] := 2;
+  matrix[3, 10] := 1;
+  figMoveDown(matrix);
+  tesMessage('figure', 'move_down', matIsEqual(etalon, matrix));
 end.

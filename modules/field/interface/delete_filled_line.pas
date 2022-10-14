@@ -1,27 +1,7 @@
 { delete_filled_line.pas }
 
-function IsLineFilled(var matrix: TMatrix; j: integer): boolean;
-var
-  i: integer;
-begin
-  for i := 1 to matWidth(matrix) - 2 do
-    if matrix[i, j] <> 3 then begin
-      IsLineFilled := False;
-      exit;
-    end;
-  IsLineFilled := True;
-end;
-
-procedure Delete(var matrix: TMatrix; n: integer);
-const
-  status_height: integer = 1;
-var
-  i, j: integer;
-begin
-  for i := 1 to matWidth(matrix) - 2 - status_height do
-    for j := n downto 4 do
-      matrix[i, j] := matrix[i, j - 1];
-end;
+{$I ../implementation/is_line_filled.pas}
+{$I ../implementation/delete_line.pas}
 
 function fieDeleteFilledLine(var matrix: TMatrix): boolean;
 const
@@ -30,8 +10,8 @@ var
   j: integer;
 begin
   for j := 4 to matHeight(matrix) - 2 - status_height do
-    if IsLineFilled(matrix, j) then begin
-      Delete(matrix, j);
+    if fieIsLineFilled(matrix, j) then begin
+      fieDeleteLine(matrix, j);
       fieDeleteFilledLine := True;
       exit;
     end;
