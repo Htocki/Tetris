@@ -4,7 +4,7 @@ unit UTarget;
 
 interface
 uses
-  UMatrix;
+  UElement, UMatrix;
 
 procedure tarInitialize(var matrix: TMatrix);
 procedure tarDelete(var matrix: TMatrix);

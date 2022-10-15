@@ -11,6 +11,7 @@ function eleIsBorder(var matrix: TMatrix; i, j: integer): boolean;
 function eleIsEmpty(var matrix: TMatrix; i, j: integer): boolean;
 function eleIsInactive(var matrix: TMatrix; i, j: integer): boolean;
 function eleIsInBorders(var matrix: TMatrix; i, j: integer): boolean;
+function eleIsTarget(var matrix: TMatrix; i, j: integer): boolean;
 
 implementation
 {$I interface/is_active.pas}
@@ -18,5 +19,6 @@ implementation
 {$I interface/is_empty.pas}
 {$I interface/is_inactive.pas}
 {$I interface/is_in_borders.pas}
+{$I interface/is_target.pas}
 
 end.
