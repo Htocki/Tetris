@@ -53,7 +53,7 @@ begin
   Initialize(matrix, renderer);
   Clrscr;
   case state of
-    s_MenuStart: begin
+    s_MenuPlay: begin
       DrawFrame(renderer);
       DrawItems(renderer, 1);
     end;
@@ -76,7 +76,7 @@ begin
       DrawScore(renderer, user.score);
       DrawPause(renderer);
     end;
-    s_PlayFinish: begin
+    s_PlayStop: begin
       DrawFrame(renderer);
       DrawSeparator(renderer);
       DrawField(matrix, renderer);

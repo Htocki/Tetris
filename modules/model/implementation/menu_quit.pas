@@ -1,9 +1,9 @@
 { menu_quit.pas }
 
-procedure MenuQuit(var state: TState; key: TKey);
+procedure modMenuQuit(var state: TState; key: TKey);
 begin
   case key of
-    k_Up: state := s_MenuStart;
+    k_Up: state := s_MenuPlay;
     k_Enter: halt;
   end;
 end;

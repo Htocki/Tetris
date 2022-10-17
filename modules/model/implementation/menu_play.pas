@@ -1,6 +1,6 @@
-{ menu_start.pas }
+{ menu_play.pas }
 
-procedure MenuStart(var state: TState; key: Tkey);
+procedure modMenuPlay(var state: TState; key: Tkey);
 begin
   case key of
     k_Down: state := s_MenuQuit;

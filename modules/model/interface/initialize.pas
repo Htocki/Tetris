@@ -5,9 +5,9 @@ const
   width: integer = 24;
   height: integer = 34;
 begin
-  state := s_MenuStart;
+  state := s_MenuPlay;
   matInitialize(matrix, width, height);
   fieInitialize(matrix);
   figInitialize(matrix);
-  tarInitialize(matrix);
+  { tarInitialize(matrix); }
 end;

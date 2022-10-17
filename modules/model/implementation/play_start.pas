@@ -1,6 +1,6 @@
-{ play.pas }
+{ play_start.pas }
 
-procedure Play(
+procedure modPlayStart(
   var matrix: TMatrix; var state: TState; key: TKey; var user: TUser);
 begin
   case key of
@@ -13,24 +13,24 @@ begin
       exit;
     end;
     k_Escape: begin
-      state := s_MenuStart;
+      state := s_MenuPlay;
       user.score := 0;
       matClear(matrix);
       fieInitialize(matrix);
       figInitialize(matrix);
-      tarInitialize(matrix);
+      { tarInitialize(matrix); }
       exit;
     end;
   end;
   figMoveDown(matrix);
   if figIsOnTheBottom(matrix) then begin
     if fieIsFilled(matrix) then begin
-      state := s_PlayFinish;
+      state := s_PlayStop;
       exit;
     end;
     figDeactivate(matrix);
     user.score := user.score + fieDeleteFilledLines(matrix);
-    figInitialize(matrix);
+    figInitialize(matrix); 
   end;
-  tarInitialize(matrix);
+  { tarInitialize(matrix); }
 end;

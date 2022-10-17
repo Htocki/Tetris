@@ -10,9 +10,9 @@ var
   i, j, width, height: integer;
 begin
   width := matWidth(matrix);
-  height := matHeight(matrix) - generation_area_height;
+  height := matHeight(matrix) - generation_area_height - status_area_height;
   SetLength(rendering_area, width, height);
   for i := 0 to width - 1 do
-    for j := 0 to height - 1 - status_area_height do
+    for j := 0 to height - 1 do
       rendering_area[i, j] := matrix[i, j + generation_area_height];
 end;

@@ -1,6 +1,6 @@
-{ finish.pas }
+{ play_stop.pas }
 
-procedure Finish(
+procedure modPlayStop(
   var matrix: TMatrix; var state: TState; key: TKey; var user: TUser);
 begin
   case key of
@@ -9,7 +9,7 @@ begin
       user.score := 0;
       fieInitialize(matrix);
       figInitialize(matrix);
-      tarInitialize(matrix);
+      {tarInitialize(matrix);}
       state := s_PlayStart;
       exit;
     end;
@@ -18,8 +18,8 @@ begin
       user.score := 0;
       fieInitialize(matrix);
       figInitialize(matrix);
-      tarInitialize(matrix);
-      state := s_MenuStart;
+      {tarInitialize(matrix);}
+      state := s_MenuPlay;
       exit;
     end;
   end;

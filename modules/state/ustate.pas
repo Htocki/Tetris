@@ -4,7 +4,7 @@ unit UState;
 
 interface
 type
-  TState = (s_MenuStart, s_MenuQuit, s_PlayStart, s_PlayPause, s_PlayFinish);
+  TState = (s_MenuPlay, s_MenuQuit, s_PlayPause, s_PlayStart, s_PlayStop);
 
 implementation
   
