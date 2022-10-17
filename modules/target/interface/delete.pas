@@ -6,6 +6,6 @@ var
 begin
   for i := 1 to matWidth(matrix) - 2 do
     for j := 0 to matHeight(matrix) - 2 do
-      if matrix[i, j] = 4 then
+      if eleIsTarget(matrix, i, j) then
         matrix[i, j] := 0;
 end;

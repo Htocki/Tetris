@@ -43,6 +43,11 @@ begin
   etalon[2, 4] := 4;
   etalon[3, 5] := 4;
   etalon[4, 5] := 4;
+  { Статус. }
+  etalon[0, 10] := 6;
+  etalon[1, 10] := 0;
+  etalon[2, 10] := 2;
+  etalon[3, 10] := 3;
   { Границы. }
   matrix[0, 4] := 1;
   matrix[0, 5] := 1;
@@ -74,6 +79,14 @@ begin
   matrix[3, 3] := 2;
   matrix[3, 4] := 2;
   matrix[4, 4] := 2;
+  { Статус. }
+  matrix[0, 10] := 6;
+  matrix[1, 10] := 0;
+  matrix[2, 10] := 2;
+  matrix[3, 10] := 3;
+  matPrint(etalon);
+  matPrint(matrix);
   tarInitialize(matrix);
+  matPrint(matrix);
   tesMessage('target', 'initialize', matIsEqual(etalon, matrix));
 end.

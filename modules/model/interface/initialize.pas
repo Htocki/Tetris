@@ -9,5 +9,5 @@ begin
   matInitialize(matrix, width, height);
   fieInitialize(matrix);
   figInitialize(matrix);
-  { tarInitialize(matrix); }
+  tarInitialize(matrix);
 end;

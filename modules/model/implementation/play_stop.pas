@@ -9,7 +9,7 @@ begin
       user.score := 0;
       fieInitialize(matrix);
       figInitialize(matrix);
-      {tarInitialize(matrix);}
+      tarInitialize(matrix);
       state := s_PlayStart;
       exit;
     end;
@@ -18,7 +18,7 @@ begin
       user.score := 0;
       fieInitialize(matrix);
       figInitialize(matrix);
-      {tarInitialize(matrix);}
+      tarInitialize(matrix);
       state := s_MenuPlay;
       exit;
     end;

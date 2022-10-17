@@ -18,7 +18,7 @@ begin
       matClear(matrix);
       fieInitialize(matrix);
       figInitialize(matrix);
-      { tarInitialize(matrix); }
+      tarInitialize(matrix);
       exit;
     end;
   end;
@@ -32,5 +32,5 @@ begin
     user.score := user.score + fieDeleteFilledLines(matrix);
     figInitialize(matrix); 
   end;
-  { tarInitialize(matrix); }
+  tarInitialize(matrix);
 end;
