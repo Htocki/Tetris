@@ -84,9 +84,6 @@ begin
   matrix[1, 10] := 0;
   matrix[2, 10] := 2;
   matrix[3, 10] := 3;
-  matPrint(etalon);
-  matPrint(matrix);
   tarInitialize(matrix);
-  matPrint(matrix);
   tesMessage('target', 'initialize', matIsEqual(etalon, matrix));
 end.
