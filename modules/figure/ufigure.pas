@@ -1,0 +1,35 @@
+{ ufigure.pas }
+
+unit UFigure;
+
+interface
+uses
+  UMatrix, UElement;
+type
+  TPosition = record
+    x: integer;
+    y: integer;
+  end;
+  TForm = (I, J, L, O, S, T, Z);
+  TOrientation = (Down, Left, Right, Top);
+
+procedure figDeactivate(var matrix: TMatrix);
+procedure figInitialize(var matrix: TMatrix);
+function figIsOnTheBottom(var matrix: TMatrix): boolean;
+procedure figMoveDown(var matrix: TMatrix);
+procedure figMoveLeft(var matrix: TMatrix);
+procedure figMoveRight(var matrix: TMatrix);
+procedure figMoveToTheBottom(var matrix: TMatrix);
+procedure figRotateRight(var matrix: TMatrix);
+
+implementation
+{$I interface/deactivate.pas}
+{$I interface/initialize.pas}
+{$I interface/is_on_the_bottom.pas}
+{$I interface/move_down.pas}
+{$I interface/move_left.pas}
+{$I interface/move_right.pas}
+{$I interface/rotate_right.pas}
+{$I interface/move_to_the_bottom}
+
+end.

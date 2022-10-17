@@ -1,8 +1,9 @@
 { tetris.pas }
 
 program Tetris;
-uses crt, SysUtils, DateUtils, UConsole, UKey,
-     UKeyboard, UMatrix, UModel, UState, UUser;  
+uses
+  crt, SysUtils, DateUtils, UConsole, UKey,
+  UKeyboard, UMatrix, UModel, UState, UUser;  
 var
   key: TKey;
   matrix, rendering_area: TMatrix;
@@ -11,9 +12,9 @@ var
   start: TDateTime;
 begin;
   { Инициализация сущностей значениями по-умолчанию }
-  keyDefaultInitialize(key);
-  useDefaultInitialize(user);
-  modDefaultInitialize(matrix, state);
+  keyInitialize(key);
+  useInitialize(user);
+  modInitialize(matrix, state);
   { Главный цикл }
   while true do begin
     start := Now;
