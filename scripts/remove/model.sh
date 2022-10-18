@@ -1,4 +1,5 @@
 #!/bin/bash
 
-rm **/model/umodel.o
-rm **/model/umodel.ppu
+dir=**/model
+rm $dir/umodel.o
+rm $dir/umodel.ppu
