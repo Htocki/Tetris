@@ -1,4 +1,5 @@
 #!/bin/bash
 
-rm **/key/ukey.o
-rm **/key/ukey.ppu
+dir=**/key
+rm $dir/ukey.o
+rm $dir/ukey.ppu
