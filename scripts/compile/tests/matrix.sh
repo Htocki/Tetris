@@ -2,11 +2,13 @@
 
 echo -e "\n[Compiling tests for matrix...]\n"
 
+dir=/modules/matrix/tests
+
 fpc -vewn -Fu"./modules/test/;./modules/matrix/" \
-  ./modules/matrix/tests/clear.pas && echo -e ""
+  .$dir/clear.pas && echo -e ""
 fpc -vewn -Fu"./modules/test/;./modules/matrix/" \
-  ./modules/matrix/tests/copy.pas && echo -e ""
+  .$dir/copy.pas && echo -e ""
 fpc -vewn -Fu"./modules/test/;./modules/matrix/" \
-  ./modules/matrix/tests/fill.pas && echo -e ""
+  .$dir/fill.pas && echo -e ""
 fpc -vewn -Fu"./modules/test/;./modules/matrix/" \
-  ./modules/matrix/tests/is_equal.pas && echo -e ""
+  .$dir/is_equal.pas && echo -e ""
