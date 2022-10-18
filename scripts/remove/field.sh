@@ -1,14 +1,17 @@
 #!/bin/bash
 
-rm **/field/ufield.o
-rm **/field/ufield.ppu
-rm **/field/**/delete_filled_lines
-rm **/field/**/delete_filled_lines.o
-rm **/field/**/delete_line
-rm **/field/**/delete_line.o
-rm **/field/**/initialize
-rm **/field/**/initialize.o
-rm **/field/**/is_filled
-rm **/field/**/is_filled.o
-rm **/field/**/is_line_filled
-rm **/field/**/is_line_filled.o
+dir=**/field
+rm $dir/ufield.o
+rm $dir/ufield.ppu
+
+dir=**/field/**
+rm $dir/delete_filled_lines
+rm $dir/delete_filled_lines.o
+rm $dir/delete_line
+rm $dir/delete_line.o
+rm $dir/initialize
+rm $dir/initialize.o
+rm $dir/is_filled
+rm $dir/is_filled.o
+rm $dir/is_line_filled
+rm $dir/is_line_filled.o
