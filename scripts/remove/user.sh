@@ -1,4 +1,5 @@
 #!/bin/bash
 
-rm **/user/uuser.o
-rm **/user/uuser.ppu
+dir=**/user
+rm $dir/uuser.o
+rm $dir/uuser.ppu
