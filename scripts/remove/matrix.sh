@@ -1,8 +1,11 @@
 #!/bin/bash
 
-rm **/matrix/umatrix.o
-rm **/matrix/umatrix.ppu
-rm **/matrix/**/clear
-rm **/matrix/**/copy
-rm **/matrix/**/fill
-rm **/matrix/**/is_equal
+dir=**/matrix
+rm $dir/umatrix.o
+rm $dir/umatrix.ppu
+
+dir=**/matrix/**
+rm $dir/clear
+rm $dir/copy
+rm $dir/fill
+rm $dir/is_equal
