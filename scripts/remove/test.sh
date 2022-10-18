@@ -1,4 +1,5 @@
 #!/bin/bash
 
-rm **/test/utest.o
-rm **/test/utest.ppu
+dir=**/test
+rm $dir/utest.o
+rm $dir/utest.ppu
