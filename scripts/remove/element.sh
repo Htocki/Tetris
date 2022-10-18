@@ -1,4 +1,5 @@
 #!/bin/bash
 
-rm **/element/uelement.o
-rm **/element/uelement.ppu
+dir=**/element
+rm $dir/uelement.o
+rm $dir/uelement.ppu
