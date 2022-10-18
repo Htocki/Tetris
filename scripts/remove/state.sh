@@ -1,4 +1,5 @@
 #!/bin/bash
 
-rm **/state/ustate.o
-rm **/state/ustate.ppu
+dir=**/state
+rm $dir/ustate.o
+rm $dir/ustate.ppu
