@@ -1,4 +1,5 @@
 #!/bin/bash
 
-rm **/console/uconsole.o
-rm **/console/uconsole.ppu
+dir=**/console
+rm $dir/uconsole.o
+rm $dir/uconsole.ppu
