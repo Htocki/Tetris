@@ -1,4 +1,5 @@
 #!/bin/bash
 
-rm **/keyboard/ukeyboard.o
-rm **/keyboard/ukeyboard.ppu
+dir=**/keyboard
+rm $dir/ukeyboard.o
+rm $dir/ukeyboard.ppu
