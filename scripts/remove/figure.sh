@@ -1,26 +1,5 @@
 #!/bin/bash
 
-# Удаляет файлов, так как модули почему-то иногда не перекомпилируются.
-
-rm **/console/uconsole.o
-rm **/console/uconsole.ppu
-
-rm **/element/uelement.o
-rm **/element/uelement.ppu
-
-rm **/field/ufield.o
-rm **/field/ufield.ppu
-rm **/field/**/delete_filled_lines
-rm **/field/**/delete_filled_lines.o
-rm **/field/**/delete_line
-rm **/field/**/delete_line.o
-rm **/field/**/initialize
-rm **/field/**/initialize.o
-rm **/field/**/is_filled
-rm **/field/**/is_filled.o
-rm **/field/**/is_line_filled
-rm **/field/**/is_line_filled.o
-
 rm **/figure/ufigure.o
 rm **/figure/ufigure.ppu
 rm **/figure/**/add_i_down
@@ -109,35 +88,3 @@ rm **/figure/**/write_orientation
 rm **/figure/**/write_orientation.o
 rm **/figure/**/write_position
 rm **/figure/**/write_position.o
-
-rm **/key/ukey.o
-rm **/key/ukey.ppu
-
-rm **/keyboard/ukeyboard.o
-rm **/keyboard/ukeyboard.ppu
-
-rm **/matrix/umatrix.o
-rm **/matrix/umatrix.ppu
-rm **/matrix/**/clear
-rm **/matrix/**/copy
-rm **/matrix/**/fill
-rm **/matrix/**/is_equal
-
-rm **/model/umodel.o
-rm **/model/umodel.ppu
-
-rm **/state/ustate.o
-rm **/state/ustate.ppu
-
-rm **/target/utarget.o
-rm **/target/utarget.ppu
-rm **/target/**/delete
-rm **/target/**/delete.o
-rm **/target/**/initialize
-rm **/target/**/initialize.o
-
-rm **/test/utest.o
-rm **/test/utest.ppu
-
-rm **/user/uuser.o
-rm **/user/uuser.ppu
